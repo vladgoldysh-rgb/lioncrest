@@ -100,9 +100,80 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Add Desktop Gate & Entry Banner HTML
+// Add Desktop Gate & Entry Banner HTML (Modal Version)
 document.addEventListener('DOMContentLoaded', () => {
-  // Insert Mobile Gate
+  // 1. Inject Styles dynamically to avoid CSS caching issues
+  const style = document.createElement('style');
+  style.textContent = `
+    #wf-mobile-gate {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #fff;
+      z-index: 9999999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px;
+    }
+    #wf-mobile-gate h1 { font-size: 32px; margin-bottom: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    #wf-mobile-gate p { font-size: 18px; color: #555; max-width: 400px; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    
+    @media (max-width: 1023px) {
+      .layout-container { display: none !important; }
+      #wf-entry-modal { display: none !important; }
+      #wf-mobile-gate { display: flex !important; }
+    }
+
+    #wf-entry-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 9999998;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #wf-entry-modal .modal-content {
+      background: #fff;
+      padding: 48px;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 4px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    #wf-entry-modal-title {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #111;
+    }
+    #wf-entry-modal-text {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin: 0 0 32px 0;
+    }
+    #wf-entry-modal-btn {
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      width: 100%;
+    }
+  `;
+  document.head.appendChild(style);
+
+  // 2. Insert Mobile Gate
   const gateHTML = `
     <div id="wf-mobile-gate">
       <h1>Best Viewed on Desktop</h1>
@@ -111,39 +182,30 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.body.insertAdjacentHTML('afterbegin', gateHTML);
 
-  // Insert Entry Banner
-  const bannerHTML = `
-    <div id="wf-entry-banner">
-      <div class="banner-inner">
-        <div>
-          <span id="wf-entry-banner-title">A Quick Note Before You Look Around</span>
-          <p id="wf-entry-banner-text">This is a structural proposal, not the finished site &mdash; built so we have something concrete to react to instead of talking in the abstract. Photos, quotes, and a few metrics are placeholders standing in for real content we'll gather together. Everything else &mdash; layout, flow, what goes where &mdash; is exactly what I'd build. If something should move, change, or get researched further, just flag it.</p>
-        </div>
-        <button id="wf-entry-banner-btn">Got it</button>
+  // 3. Insert Entry Modal
+  const modalHTML = `
+    <div id="wf-entry-modal">
+      <div class="modal-content">
+        <span id="wf-entry-modal-title">A Quick Note Before You Look Around</span>
+        <p id="wf-entry-modal-text">This is a structural proposal, not the finished site &mdash; built so we have something concrete to react to instead of talking in the abstract. Photos, quotes, and a few metrics are placeholders standing in for real content we'll gather together. Everything else &mdash; layout, flow, what goes where &mdash; is exactly what I'd build. If something should move, change, or get researched further, just flag it.</p>
+        <button id="wf-entry-modal-btn">Got it</button>
       </div>
     </div>
   `;
-  
-  // Insert before the layout-container so it stays at the very top
-  const layoutContainer = document.querySelector('.layout-container');
-  if (layoutContainer) {
-    layoutContainer.insertAdjacentHTML('beforebegin', bannerHTML);
-  } else {
-    document.body.insertAdjacentHTML('afterbegin', bannerHTML);
-  }
+  document.body.insertAdjacentHTML('afterbegin', modalHTML);
 
-  // Handle Banner Logic
-  const banner = document.getElementById('wf-entry-banner');
-  const btn = document.getElementById('wf-entry-banner-btn');
+  // 4. Handle Modal Logic
+  const modal = document.getElementById('wf-entry-modal');
+  const btn = document.getElementById('wf-entry-modal-btn');
   
-  if (banner && btn) {
+  if (modal && btn) {
     if (!sessionStorage.getItem('lioncrestBannerDismissed')) {
-      banner.style.display = 'block';
+      modal.style.display = 'flex';
     }
     
     btn.addEventListener('click', () => {
       sessionStorage.setItem('lioncrestBannerDismissed', 'true');
-      banner.style.display = 'none';
+      modal.style.display = 'none';
     });
   }
 });
