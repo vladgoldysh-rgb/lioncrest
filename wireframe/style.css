@@ -704,12 +704,17 @@ ul {
 .wf-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+}
+.wf-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 .wf-form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 .wf-form-group label {
   font-size: 14px;

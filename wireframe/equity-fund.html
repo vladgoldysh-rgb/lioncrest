@@ -163,15 +163,42 @@
         <div style="display: flex; gap: 64px; flex-wrap: wrap;">
           <div style="flex: 1; min-width: 300px; max-width: 500px;">
             <form class="wf-form">
-              <div class="wf-form-group" style="margin-bottom: 24px;">
-                <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Name</label>
-                <input type="text" class="wf-input" placeholder="Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+              <div class="wf-form-row">
+                <div class="wf-form-group">
+                  <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Name</label>
+                  <input type="text" class="wf-input" placeholder="Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+                </div>
+                <div class="wf-form-group">
+                  <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Work Email</label>
+                  <input type="email" class="wf-input" placeholder="Work Email" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+                </div>
               </div>
-              <div class="wf-form-group" style="margin-bottom: 24px;">
-                <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Work Email</label>
-                <input type="email" class="wf-input" placeholder="Work Email" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+              <div class="wf-form-row">
+                <div class="wf-form-group">
+                  <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Company Name</label>
+                  <input type="text" class="wf-input" placeholder="Company Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+                </div>
+                <div class="wf-form-group">
+                  <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Current ARR</label>
+                  <input type="text" class="wf-input" placeholder="Current ARR" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+                </div>
               </div>
-              <div class="wf-form-group" style="margin-bottom: 24px;">
+              <div class="wf-form-row">
+                <div class="wf-form-group">
+                  <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Sector</label>
+                  <select class="wf-input" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; background: #fff;">
+                    <option>Select...</option>
+                    <option>Fintech</option>
+                    <option>Cybersecurity</option>
+                    <option>Digital Health</option>
+                    <option>Supply Chain/Logistics</option>
+                    <option>Defense/Gov Tech</option>
+                    <option>LegalTech</option>
+                  </select>
+                </div>
+                <div></div>
+              </div>
+              <div class="wf-form-group">
                 <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Message</label>
                 <textarea class="wf-input" rows="4" placeholder="Message" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
               </div>
