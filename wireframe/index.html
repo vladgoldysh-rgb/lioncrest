@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lioncrest — Website Wireframe Spec</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+    <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li class="active">Home</li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Insights & Notes</h2>
+      <div class="insight-item">
+        <strong>Section 1 — Header</strong>
+        <p>Nav stays minimal — matches what you already have (Home / Portfolio / Team / Funds & Strategy / Investor Login). Investor Login isn't my idea, by the way — it's already on your site, and every reference fund we looked at (Viola, Lux Capital, Kickstart) has it too. Keeping it because it signals institutional seriousness.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 2 — Hero</strong>
+        <p>Leib, you told me on the call you're "a little bit of a visual person" and want team credibility visible right away. So the Hero carries both of you together — one shared photo instead of two separate headshots, quote overlaid on the image, matching Aleph's homepage pattern. Reads more like a real partnership than two isolated portraits. Also covers the "team teaser" need without a dedicated section, since the rest of your team gets its own spot further down.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 3 — Scroll-Reveal Intro</strong>
+        <p>Bridges the Hero and the Two-Fund Cards. Short line, words fade in as you scroll — same idea as that "boutique AI agency" animated-text example. Meant to hold attention right before the fund-selection moment. It's basically your own existing Funds & Strategy copy — reusing it since it's already clear and already yours.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 4 — Two-Fund Cards</strong>
+        <p>Solves the exact thing you named on the call, Leib — "hard messaging the two different products to two different types of investors." Right after the Hero, not buried, so a visitor self-sorts fast. Loosely modeled on Viola's fund-grid, but 2 cards instead of 4, and each adds a "who leads this fund" line Viola's cards don't have.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 5 — Portfolio Carousel</strong>
+        <p>Modeled on Greylock's homepage proof carousel. Drones/ANRA leads first specifically because that's the example you wanted, Leib — "these drones... I've got video and clips." Headline had to stay generic since 3-4 companies rotate through the same spot.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 6 — Client & Founder Trust</strong>
+        <p>These testimonials already live on your Prospeq site — 5 quotes, revenue growth, partner support. Not new content, just migrated. Framing it as trust for the whole Lioncrest brand, not "Prospeq-only," since both funds sit under one site now.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 7 — Team Teaser</strong>
+        <p>Hero already covers Leib and Ryan. This shows the team runs deeper — Zeba and Nitsan otherwise never show up on the homepage. For a 2-year-old, first fund, team depth is a real trust signal — shouldn't rest on two founder photos alone.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 8 — Footer</strong>
+        <p>Email layout follows Viola Credit's "Connect With Us" — multiple purpose-specific addresses, prominent, direct mailto. Adds onto what you have now (one generic contact@). Flagging as a recommended upgrade — need to confirm with Ryan whether purpose-specific inboxes actually exist before locking addresses.</p>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+        <nav class="wf-nav">
+          <a href="#">Portfolio</a>
+          <a href="#">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds</a>
+            <div class="wf-dropdown-menu">
+              <a href="#">Equity Fund</a>
+              <a href="#">Prospeq — Credit Fund</a>
+            </div>
+          </div>
+          <a href="#">Our Approach</a>
+          <a href="#">LP Contact</a>
+        </nav>
+        <a href="#" class="wf-btn-secondary">Investor Login</a>
+      </header>
+
+      <!-- Section 2 — Hero -->
+      <section class="wf-section wf-hero-new">
+        <div class="wf-hero-header">
+          <div class="wf-eyebrow">LIONCREST</div>
+          <h1 class="wf-headline">Backing What's Next — With the Capital to Match</h1>
+          <p class="wf-subhead">Equity for the upside. Credit for the discipline. One firm, built to move at either speed.</p>
+        </div>
+        
+        <div class="wf-hero-image-container">
+          <div class="wf-placeholder-box wf-hero-shared-photo">
+            <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #999;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <span>[PLACEHOLDER — Leib Bolel & Ryan Edwards Shared Photo]</span>
+          </div>
+          
+          <div class="wf-quote-overlay">
+            <blockquote>
+              [PLACEHOLDER — Leib & Ryan joint quote, to be drafted and approved separately. Wireframe as a quote-styled text block with attribution line "— Leib Bolel & Ryan Edwards, Managing Partners"]
+            </blockquote>
+            <cite>
+              <span class="wf-fund-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </span>
+              Leib Bolel, Managing Partner 
+              <span class="wf-cite-divider">&middot;</span>
+              <span class="wf-fund-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </span>
+              Ryan Edwards, Managing Partner
+            </cite>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 — Scroll-Reveal Intro Statement -->
+      <section class="wf-section wf-intro">
+
+        <h2 class="wf-reveal-text" id="reveal-text">
+          <span>For</span> <span>some</span> <span>companies,</span> <span>equity</span> <span>is</span> <span>the</span> <span>rocket</span> <span>fuel</span> <span>that</span> <span>drives</span> <span>breakout</span> <span>success.</span> <span>For</span> <span>others,</span> <span>private</span> <span>credit</span> <span>is</span> <span>the</span> <span>better-aligned</span> <span>path</span> <span>to</span> <span>scale.</span> <span>Lioncrest</span> <span>is</span> <span>built</span> <span>to</span> <span>deliver</span> <span>both</span> <span>—</span> <span>with</span> <span>discipline,</span> <span>speed,</span> <span>and</span> <span>conviction.</span>
+        </h2>
+      </section>
+
+      <!-- Section 4 — Two-Fund Cards -->
+      <section class="wf-section wf-funds">
+        <div class="wf-eyebrow">OUR FUNDS</div>
+        <h2 class="wf-section-title">Two Funds. Two Kinds of Conviction.</h2>
+        
+        <div class="wf-card-grid-2">
+          <!-- Card 1 -->
+          <div class="wf-card">
+            <div class="wf-card-label">VENTURE CAPITAL</div>
+            <h3 class="wf-card-title">Lioncrest Venture Fund</h3>
+            <p class="wf-card-desc">Investing in capital-efficient companies with product-market fit — for the founders building what's next.</p>
+            <div class="wf-card-ledby">Led by Leib Bolel</div>
+            <a href="#" class="wf-btn">Explore the Equity Fund &rarr;</a>
+          </div>
+          <!-- Card 2 -->
+          <div class="wf-card">
+            <div class="wf-card-label">PRIVATE CREDIT</div>
+            <h3 class="wf-card-title">Lioncrest Prospeq Fund</h3>
+            <p class="wf-card-desc">Structured financing for technology companies already proving it — risk-adjusted, cash-flow-driven returns.</p>
+            <div class="wf-card-ledby">Led by Ryan Edwards</div>
+            <a href="#" class="wf-btn">Explore Prospeq &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 — Portfolio Story -->
+      <section class="wf-section wf-portfolio">
+        <div class="wf-eyebrow">PORTFOLIO</div>
+        <div class="wf-section-header-inline">
+          <h2 class="wf-section-title">Backing the Companies Building What's Next</h2>
+          <a href="#" class="wf-link-outlined">See the Full Portfolio &rarr;</a>
+        </div>
+        
+        <div class="wf-carousel-container">
+          <div class="wf-carousel-slides">
+            
+            <!-- Slide 1 -->
+            <div class="wf-slide active">
+              <div class="wf-placeholder-box wf-media-large">
+                <span>[PLACEHOLDER — video or photo of ANRA / drone technology, large format, positioned right or as a full-width background]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>ANRA Technologies</strong>
+                  <p>ANRA Technologies provides global end-to-end software solutions for UAS traffic management and drone operations, supporting regulators, airspace managers, and commercial operators.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="wf-slide">
+              <div class="wf-placeholder-box wf-media-large">
+                <span>[PLACEHOLDER — video or photo of Lassen Peak, large format]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>Lassen Peak</strong>
+                  <p>Lassen Peak is a Seattle-area startup pioneering advanced, non-invasive public safety technology that helps law enforcement safely detect concealed dangerous objects and weapons.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="wf-slide">
+              <div class="wf-placeholder-box wf-media-large">
+                <span>[PLACEHOLDER — video or photo of PAXAFE, large format]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>PAXAFE</strong>
+                  <p>PAXAFE is an AI-driven, device-agnostic platform that turns shipment data into actionable risk insights, helping cold chain shippers reduce loss and improve operational efficiency.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="wf-slide">
+              <div class="wf-placeholder-box wf-media-large">
+                <span>[PLACEHOLDER — video or photo of Novella, large format]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>Novella</strong>
+                  <p>Novella is building the AI-native operating system for specialty insurance distribution, connecting brokers, carriers, and underwriters through a unified workflow platform.</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="wf-carousel-dots">
+            <span class="wf-dot active"></span>
+            <span class="wf-dot"></span>
+            <span class="wf-dot"></span>
+            <span class="wf-dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 — Client & Founder Trust -->
+      <section class="wf-section wf-trust">
+        <div class="wf-eyebrow">WHAT FOUNDERS SAY</div>
+        <h2 class="wf-section-title">Trusted by the Companies We Back</h2>
+        
+        <div class="wf-testimonial-grid">
+          <div class="wf-placeholder-box wf-testimonial-card">
+            <span>[PLACEHOLDER 1 — pull 1 of the 5 existing Prospeq testimonials verbatim from prospeq.co once source text is confirmed; do not invent new testimonial copy]</span>
+          </div>
+          <div class="wf-placeholder-box wf-testimonial-card">
+            <span>[PLACEHOLDER 2 — pull 2 of the 5 existing Prospeq testimonials verbatim from prospeq.co once source text is confirmed; do not invent new testimonial copy]</span>
+          </div>
+          <div class="wf-placeholder-box wf-testimonial-card">
+            <span>[PLACEHOLDER 3 — pull 3 of the 5 existing Prospeq testimonials verbatim from prospeq.co once source text is confirmed; do not invent new testimonial copy]</span>
+          </div>
+        </div>
+        
+        <div class="wf-secondary-cta">
+          <a href="#">Looking for funding? Get in touch &rarr;</a>
+        </div>
+      </section>
+
+      <!-- Section 7 — Team Teaser -->
+      <section class="wf-section wf-team-teaser">
+        <div class="wf-eyebrow">TEAM</div>
+        <div class="wf-section-header-inline">
+          <h2 class="wf-section-title">The People Behind the Capital</h2>
+          <a href="#" class="wf-link-outlined">Meet the Full Team &rarr;</a>
+        </div>
+        
+        <div class="wf-team-grid">
+          <div class="wf-placeholder-box wf-team-card">
+            <div class="wf-team-photo">
+              <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <strong>Leib Bolel</strong>
+            <span>Managing Partner</span>
+          </div>
+          <div class="wf-placeholder-box wf-team-card">
+            <div class="wf-team-photo">
+              <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <strong>Ryan Edwards</strong>
+            <span>Managing Partner</span>
+          </div>
+          <div class="wf-placeholder-box wf-team-card">
+            <div class="wf-team-photo">
+              <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <strong>Zeba Rooheen</strong>
+            <span>Financial Data Analyst</span>
+          </div>
+          <div class="wf-placeholder-box wf-team-card">
+            <div class="wf-team-photo">
+              <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <strong>Nitsan Nairdorf</strong>
+            <span>Venture Partner</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8 — Footer -->
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="#">Portfolio</a>
+                <a href="#">Team</a>
+                <a href="#">Our Approach</a>
+                <a href="#">LP Contact</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="#">Equity Fund</a>
+                <a href="#">Prospeq — Credit Fund</a>
+              </nav>
+            </div>
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect With Us</h3>
+              <ul class="wf-email-list">
+                <li>
+                  <span class="wf-email-label">For Founders:</span> 
+                  <a href="mailto:dealflow@lioncrest.vc" class="wf-email-address">dealflow@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Prospective Investors:</span> 
+                  <a href="mailto:investors@lioncrest.vc" class="wf-email-address">investors@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Everything Else:</span> 
+                  <a href="mailto:contact@lioncrest.vc" class="wf-email-address">contact@lioncrest.vc</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+      
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
