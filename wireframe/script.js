@@ -99,3 +99,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Add Desktop Gate & Entry Banner HTML
+document.addEventListener('DOMContentLoaded', () => {
+  // Insert Mobile Gate
+  const gateHTML = `
+    <div id="wf-mobile-gate">
+      <h1>Best Viewed on Desktop</h1>
+      <p>This wireframe is built for desktop only &mdash; it isn't optimized for mobile or tablet screens yet. Please open this link on a computer for the best experience.</p>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('afterbegin', gateHTML);
+
+  // Insert Entry Banner
+  const bannerHTML = `
+    <div id="wf-entry-banner">
+      <div class="banner-inner">
+        <div>
+          <span id="wf-entry-banner-title">A Quick Note Before You Look Around</span>
+          <p id="wf-entry-banner-text">This is a structural proposal, not the finished site &mdash; built so we have something concrete to react to instead of talking in the abstract. Photos, quotes, and a few metrics are placeholders standing in for real content we'll gather together. Everything else &mdash; layout, flow, what goes where &mdash; is exactly what I'd build. If something should move, change, or get researched further, just flag it.</p>
+        </div>
+        <button id="wf-entry-banner-btn">Got it</button>
+      </div>
+    </div>
+  `;
+  
+  // Insert before the layout-container so it stays at the very top
+  const layoutContainer = document.querySelector('.layout-container');
+  if (layoutContainer) {
+    layoutContainer.insertAdjacentHTML('beforebegin', bannerHTML);
+  } else {
+    document.body.insertAdjacentHTML('afterbegin', bannerHTML);
+  }
+
+  // Handle Banner Logic
+  const banner = document.getElementById('wf-entry-banner');
+  const btn = document.getElementById('wf-entry-banner-btn');
+  
+  if (banner && btn) {
+    if (!sessionStorage.getItem('lioncrestBannerDismissed')) {
+      banner.style.display = 'block';
+    }
+    
+    btn.addEventListener('click', () => {
+      sessionStorage.setItem('lioncrestBannerDismissed', 'true');
+      banner.style.display = 'none';
+    });
+  }
+});
