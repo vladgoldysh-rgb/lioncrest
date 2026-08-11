@@ -63,13 +63,25 @@ ul {
 }
 
 .page-list ul li {
+  margin-bottom: 4px;
+}
+
+.page-list ul li a {
+  display: block;
   padding: 8px 12px;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
 }
 
-.page-list ul li.active {
+.page-list ul li a:hover {
+  background-color: #f5f5f5;
+}
+
+.page-list ul li a.active {
   background-color: #e0e0e0;
   font-weight: 500;
 }
