@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prospeq — Credit Fund — Lioncrest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+    <nav class="page-list">
+      <h2>Pages</h2>
+      <ul class="page-list">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="our-approach.html">Our Approach</a></li>
+        <li><a href="equity-fund.html">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html" class="active">Prospeq — Credit Fund</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Insights & Notes</h2>
+      <div class="insight-item">
+        <strong>Page Note</strong>
+        <p>Same template as the Equity Fund page, for consistency. This is probably the page that matters most to Ryan specifically on Thursday's call — keeping the structure identical to the Equity page so nothing reads as "the credit fund got the lesser treatment."</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 4 — Trust Signal (Testimonials)</strong>
+        <p>These are the real, existing Prospeq testimonials — 5 quotes currently live on prospeq.co, praising Ryan and the team, citing revenue growth (2x in one case) and help from strategic partners. This section should feel the most "already proven" on the whole site, since the content already exists and already performs — migration, not new writing.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 5 — Portfolio (subset)</strong>
+        <p>Filtered view of the shared Portfolio component, filtered to Prospeq-funded companies. Note to self: the current Prospeq portfolio page lists 20+ founder names with no full company descriptions — needs reconciling/simplifying before real content goes in. Not wireframing all 20+, just a representative sample of 4.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 6 — Contact</strong>
+        <p>Fields differ from the Equity contact form, per what we agreed earlier — credit applicants need revenue context up front, not just a generic message.</p>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+        <nav class="wf-nav">
+          <a href="#">Portfolio</a>
+          <a href="#">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds</a>
+            <div class="wf-dropdown-menu">
+              <a href="#">Equity Fund</a>
+              <a href="#">Prospeq — Credit Fund</a>
+            </div>
+          </div>
+          <a href="#">Our Approach</a>
+          <a href="#">LP Contact</a>
+        </nav>
+        <a href="#" class="wf-btn-secondary">Investor Login</a>
+      </header>
+
+      
+      <!-- Section 1 — Hero -->
+      <section class="wf-section wf-hero-new" style="border-bottom: 1px solid #eee; padding-bottom: 48px;">
+        <div class="wf-eyebrow">PRIVATE CREDIT</div>
+        <h2 class="wf-section-title" style="font-size: 48px; margin-bottom: 16px;">Lioncrest Prospeq Fund</h2>
+        <p class="wf-hero-subhead" style="margin-bottom: 48px; max-width: 700px;">A Broader Focus on Technology Companies</p>
+        
+        <div class="wf-stats-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;">
+          <div class="wf-stat-item">
+            <h4 style="font-size: 12px; text-transform: uppercase; color: #666; margin-bottom: 8px; font-weight: 600; border-bottom: 1px solid #ccc; padding-bottom: 8px;">Initial Investment Size</h4>
+            <p style="font-size: 14px; line-height: 1.5; color: #333;">$500K – $2MM</p>
+          </div>
+          <div class="wf-stat-item">
+            <h4 style="font-size: 12px; text-transform: uppercase; color: #666; margin-bottom: 8px; font-weight: 600; border-bottom: 1px solid #ccc; padding-bottom: 8px;">Stage</h4>
+            <p style="font-size: 14px; line-height: 1.5; color: #333;">Companies with annual revenues of $2MM – $10MM</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 — Sectors We Focus On -->
+      <section class="wf-section">
+        <div class="wf-tag-cloud" style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 12px; text-transform: uppercase; font-weight: 600;">B2B</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 12px; text-transform: uppercase; font-weight: 600;">B2C</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 12px; text-transform: uppercase; font-weight: 600;">TECH. ENABLED</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 12px; text-transform: uppercase; font-weight: 600;">MARKET PLACE</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 12px; text-transform: uppercase; font-weight: 600;">SAAS</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 12px; text-transform: uppercase; font-weight: 600;">HARDWARE</span>
+        </div>
+      </section>
+
+      <!-- Section 3 — Team -->
+      <section class="wf-section">
+        <h2 class="wf-section-title" style="font-size: 24px; margin-bottom: 24px;">Who Leads This Fund</h2>
+        <div class="wf-mini-card" style="display: flex; align-items: center; gap: 16px; border: 1px solid #ccc; padding: 16px; max-width: 300px;">
+          <div class="wf-mini-photo" style="width: 48px; height: 48px; background: #eee; border: 1px solid #ccc; border-radius: 50%;"></div>
+          <div>
+            <strong style="font-size: 16px;">Ryan Edwards</strong><br>
+            <span style="color: #666; font-size: 14px;">Managing Partner</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 — Trust Signal (Testimonials) -->
+      <section class="wf-section">
+        <div class="wf-placeholder-box" style="padding: 48px; min-height: 120px; display: flex; align-items: center; justify-content: center; background: #f9f9f9; border: 1px solid #ccc; text-align: center;">
+          <span style="color: #666; font-size: 14px;">[PLACEHOLDER — pull all 5 existing testimonials verbatim from prospeq.co "What Our Clients Are Saying" section. Do not invent replacement quotes.]</span>
+        </div>
+      </section>
+
+      <!-- Section 5 — Portfolio (subset) -->
+      <section class="wf-section">
+        <div class="wf-section-header-inline">
+          <h2 class="wf-section-title">Portfolio</h2>
+          <a href="#" class="wf-link-outlined">See Full Portfolio &rarr;</a>
+        </div>
+        
+        <div class="wf-portfolio-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          <div class="wf-portfolio-card" style="border: 1px solid #ccc; padding: 24px;">
+            <div class="wf-placeholder-box" style="height: 60px; width: 120px; margin-bottom: 16px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;"><span>[LOGO]</span></div>
+            <strong>Upward</strong>
+            <p style="font-size: 14px; color: #666; margin-top: 8px;">Aaron Gregory & Danielle Hill</p>
+          </div>
+          <div class="wf-portfolio-card" style="border: 1px solid #ccc; padding: 24px;">
+            <div class="wf-placeholder-box" style="height: 60px; width: 120px; margin-bottom: 16px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;"><span>[LOGO]</span></div>
+            <strong>Metafy</strong>
+            <p style="font-size: 14px; color: #666; margin-top: 8px;">Josh Fabian</p>
+          </div>
+          <div class="wf-portfolio-card" style="border: 1px solid #ccc; padding: 24px;">
+            <div class="wf-placeholder-box" style="height: 60px; width: 120px; margin-bottom: 16px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;"><span>[LOGO]</span></div>
+            <strong>AptDeco</strong>
+            <p style="font-size: 14px; color: #666; margin-top: 8px;">Reham Fagiri and Kalam Dennis</p>
+          </div>
+          <div class="wf-portfolio-card" style="border: 1px solid #ccc; padding: 24px;">
+            <div class="wf-placeholder-box" style="height: 60px; width: 120px; margin-bottom: 16px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;"><span>[LOGO]</span></div>
+            <strong>Compliance.ai</strong>
+            <p style="font-size: 14px; color: #666; margin-top: 8px;">Asif Alam</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 — Contact -->
+      <section class="wf-section" style="background: #f9f9f9; padding: 48px; border: 1px solid #eee;">
+        <h2 class="wf-section-title">Looking for Growth Financing?</h2>
+        <div style="display: flex; gap: 64px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 300px; max-width: 500px;">
+            <form class="wf-form">
+              <div class="wf-form-group" style="margin-bottom: 24px;">
+                <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Name</label>
+                <input type="text" class="wf-input" placeholder="Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+              </div>
+              <div class="wf-form-group" style="margin-bottom: 24px;">
+                <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Work Email</label>
+                <input type="email" class="wf-input" placeholder="Work Email" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+              </div>
+              <div class="wf-form-group" style="margin-bottom: 24px;">
+                <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Annual Revenue</label>
+                <select class="wf-input" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; background: #fff;">
+                  <option>Select...</option>
+                  <option>$2M - $5M</option>
+                  <option>$5M - $10M</option>
+                  <option>$10M+</option>
+                </select>
+              </div>
+              <div class="wf-form-group" style="margin-bottom: 24px;">
+                <label style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px;">Message</label>
+                <textarea class="wf-input" rows="4" placeholder="Message" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
+              </div>
+              <button type="button" class="wf-btn" style="width: 100%; padding: 16px; background: #111; color: #fff; font-weight: 600; border: none; font-size: 16px;">Submit</button>
+            </form>
+          </div>
+          <div style="flex: 1; min-width: 300px; display: flex; align-items: center;">
+            <p style="font-size: 24px; color: #666; line-height: 1.4;">Prefer email? Reach Ryan directly at <br><a href="mailto:ryan@lioncrest.vc" style="color: #333; font-weight: 700; text-decoration: underline;">ryan@lioncrest.vc</a><br><span style="font-size: 14px; margin-top: 16px; display: block; color: #999;">[PLACEHOLDER — confirm this is the correct address before finalizing]</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7 — FAQ -->
+      <section class="wf-section">
+        <h2 class="wf-section-title">FAQ</h2>
+        <div class="wf-placeholder-box" style="padding: 24px; background: #f9f9f9; border: 1px solid #ccc; text-align: center; color: #666; font-size: 14px;">
+          <span>[Reuses relevant items from the Our Approach FAQ — credit-specific subset, including the three original Prospeq FAQ questions ("What does Prospeq mean?" etc.) Do not invent new questions here.]</span>
+        </div>
+      </section>
+
+      <!-- Section 8 — Footer -->
+
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="#">Portfolio</a>
+                <a href="#">Team</a>
+                <a href="#">Our Approach</a>
+                <a href="#">LP Contact</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="#">Equity Fund</a>
+                <a href="#">Prospeq — Credit Fund</a>
+              </nav>
+            </div>
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect With Us</h3>
+              <ul class="wf-email-list">
+                <li>
+                  <span class="wf-email-label">For Founders:</span> 
+                  <a href="mailto:dealflow@lioncrest.vc" class="wf-email-address">dealflow@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Prospective Investors:</span> 
+                  <a href="mailto:investors@lioncrest.vc" class="wf-email-address">investors@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Everything Else:</span> 
+                  <a href="mailto:contact@lioncrest.vc" class="wf-email-address">contact@lioncrest.vc</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+      
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -638,6 +638,83 @@ ul {
   border-top: 1px solid #ddd;
   padding-top: 24px;
   font-size: 12px;
-  color: #666;
+  color: #999;
   text-align: center;
+}
+
+/* =========================================
+   PHASE 2 COMPONENTS
+   ========================================= */
+
+/* Accordion */
+.wf-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wf-accordion {
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  padding: 16px 24px;
+  cursor: pointer;
+}
+.wf-accordion summary {
+  font-weight: 600;
+  font-size: 18px;
+  list-style: none; /* Hide default arrow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.wf-accordion summary::-webkit-details-marker {
+  display: none;
+}
+.wf-accordion summary::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 400;
+  color: #666;
+}
+.wf-accordion[open] summary::after {
+  content: '−';
+}
+.wf-accordion-content {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Forms */
+.wf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.wf-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wf-form-group label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.wf-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 16px;
+  background: #fff;
+}
+.wf-input:focus {
+  outline: none;
+  border-color: #333;
+}
+textarea.wf-input {
+  resize: vertical;
 }
