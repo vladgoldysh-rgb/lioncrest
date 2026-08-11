@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Member Detail — Lioncrest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+    <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="our-approach.html" >Our Approach</a></li>
+        <li><a href="equity-fund.html">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Prospeq — Credit Fund</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="team-detail.html" class="active">Team Member Detail</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio-detail.html">Portfolio Profile Page</a></li>
+        <li><a href="lp-contact.html">LP Contact</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Insights & Notes</h2>
+
+      <div class="insight-item">
+        <strong>Page Note</strong>
+        <p>Single reusable template for all team members, not a custom page per person. Kept deliberately light &mdash; photo, short bio, fund affiliation, one career highlight as a trust signal, contact + LinkedIn. Modeled directly on Viola's individual team-member page (the Tal Abuloff example) &mdash; bio paragraph, one pull-quote-style career highlight, a "Contact me" button that opens mailto, social links.</p>
+      </div>
+
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+                <nav class="wf-nav">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="team.html">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds</a>
+            <div class="wf-dropdown-menu">
+              <a href="equity-fund.html">Equity Fund</a>
+              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+            </div>
+          </div>
+          <a href="our-approach.html">Our Approach</a>
+        </nav>
+        <a href="#" class="wf-btn-secondary">Investor Login</a>
+      </header>
+
+      
+      
+
+      <!-- Section 1 — Profile Hero -->
+      <section class="wf-section" style="padding-top: 48px; border-bottom: 1px solid #eee; padding-bottom: 48px;">
+        <a href="team.html" style="display: inline-block; margin-bottom: 32px; font-size: 14px; color: #666; text-decoration: none;">&larr; Back to Team</a>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start;">
+          <div class="wf-placeholder-box" style="width: 300px; height: 350px; background: #eee; border: 1px solid #ccc; flex-shrink: 0;">
+            <span>[Photo placeholder]</span>
+          </div>
+          
+          <div style="flex: 1; min-width: 300px;">
+            <div class="wf-placeholder-box" style="width: 120px; height: 40px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #999; margin-bottom: 24px;">
+              <span>[Fund Logo / Tag]</span>
+            </div>
+            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 8px;">[First Last]</h1>
+            <p style="font-size: 20px; color: #666; margin-bottom: 32px; font-weight: 500;">[Role]</p>
+            
+            <p style="font-size: 16px; line-height: 1.6; color: #333; margin-bottom: 32px; max-width: 700px;">
+              [PLACEHOLDER &mdash; 2-3 sentences per team member, to be drafted/approved individually. Do not invent biographical claims.]
+            </p>
+            
+            <blockquote style="border-left: 4px solid #111; padding-left: 24px; margin: 0 0 48px 0; font-size: 18px; font-style: italic; color: #555;">
+              [PLACEHOLDER &mdash; one notable past role or achievement per person]
+            </blockquote>
+            
+            <div style="display: flex; gap: 16px; align-items: center;">
+              <a href="#" class="wf-btn-primary">Contact Me</a>
+              <span style="font-size: 12px; color: #999;">(opens mailto: [PLACEHOLDER — confirm address])</span>
+            </div>
+            
+            <div style="margin-top: 32px; display: flex; gap: 16px;">
+              <a href="#" style="text-decoration: none; color: #111; font-weight: 600;">LinkedIn</a>
+              <a href="#" style="text-decoration: none; color: #111; font-weight: 600;">Twitter/X</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8 — Footer -->
+
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+                            <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Team</a>
+                <a href="our-approach.html">Our Approach</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+                            <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="equity-fund.html">Equity Fund</a>
+                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              </nav>
+            </div>
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect With Us</h3>
+              <ul class="wf-email-list">
+                <li>
+                  <span class="wf-email-label">For Founders:</span> 
+                  <a href="mailto:dealflow@lioncrest.vc" class="wf-email-address">dealflow@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Prospective Investors:</span> 
+                  <a href="mailto:investors@lioncrest.vc" class="wf-email-address">investors@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Everything Else:</span> 
+                  <a href="mailto:contact@lioncrest.vc" class="wf-email-address">contact@lioncrest.vc</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+      
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

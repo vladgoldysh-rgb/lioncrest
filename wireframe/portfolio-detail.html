@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Profile Page — Lioncrest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+    <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="our-approach.html" >Our Approach</a></li>
+        <li><a href="equity-fund.html">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Prospeq — Credit Fund</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="team-detail.html">Team Member Detail</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio-detail.html" class="active">Portfolio Profile Page</a></li>
+        <li><a href="lp-contact.html">LP Contact</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Insights & Notes</h2>
+
+      <div class="insight-item">
+        <strong>Page Note</strong>
+        <p>This is Stage 2 of the Portfolio interaction (Company Profile Page). It sits on its own URL and provides a deep dive into the company after a visitor clicks "View Company Profile" from the modal overlay. It includes a "Similar Companies" horizontal carousel at the bottom to encourage continued browsing within the portfolio.</p>
+      </div>
+
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+                <nav class="wf-nav">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="team.html">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds</a>
+            <div class="wf-dropdown-menu">
+              <a href="equity-fund.html">Equity Fund</a>
+              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+            </div>
+          </div>
+          <a href="our-approach.html">Our Approach</a>
+        </nav>
+        <a href="#" class="wf-btn-secondary">Investor Login</a>
+      </header>
+
+      
+      
+
+      <!-- Section 4 — Company Profile Page (Stage 2) -->
+      <section class="wf-section" style="padding-top: 48px; border-bottom: 1px solid #eee; padding-bottom: 64px;">
+        <a href="portfolio.html" style="display: inline-block; margin-bottom: 32px; font-size: 14px; color: #666; text-decoration: none;">&larr; Back to Portfolio</a>
+        
+        <div class="wf-placeholder-box" style="width: 100%; height: 400px; background: #eee; border: 1px solid #ccc; margin-bottom: 48px;">
+          <span>[Large media placeholder &mdash; founders or product]</span>
+        </div>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start;">
+          
+          <!-- Left Col: Logo & Details -->
+          <div style="flex: 1; min-width: 250px; max-width: 300px;">
+            <div class="wf-placeholder-box" style="width: 150px; height: 60px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; margin-bottom: 32px;">
+              <span>[PAXAFE LOGO]</span>
+            </div>
+            
+            <div style="margin-bottom: 24px;">
+              <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Industries</strong>
+              <p style="font-size: 16px;">[PLACEHOLDER &mdash; matches sector tags]</p>
+            </div>
+            <div style="margin-bottom: 24px;">
+              <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Milestones</strong>
+              <p style="font-size: 16px;">[PLACEHOLDER &mdash; e.g. "Lioncrest investment: 2024"]</p>
+            </div>
+            <div style="margin-bottom: 32px;">
+              <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Founders</strong>
+              <p style="font-size: 16px;">[PLACEHOLDER &mdash; names where known, e.g. from existing Prospeq founder list]</p>
+            </div>
+            
+            <a href="#" class="wf-btn-secondary" style="display: inline-block;">Visit Website</a>
+          </div>
+          
+          <!-- Right Col: Description -->
+          <div style="flex: 2; min-width: 300px;">
+            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 24px;">PAXAFE</h1>
+            <div style="font-size: 18px; line-height: 1.6; color: #333;">
+              <p style="margin-bottom: 16px;">[PLACEHOLDER &mdash; Full description of the company, the problem they solve, and their solution.]</p>
+              <p style="margin-bottom: 16px;">[PLACEHOLDER &mdash; Additional paragraph detailing why Lioncrest invested or the company's growth trajectory.]</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section: Similar Companies Carousel -->
+      <section class="wf-section">
+        <h2 class="wf-section-title" style="font-size: 24px; margin-bottom: 32px;">Similar Companies</h2>
+        <div style="display: flex; gap: 24px; overflow-x: auto; padding-bottom: 16px;">
+          <!-- 3-4 Cards -->
+          <div class="wf-placeholder-box" style="flex: 0 0 250px; height: 150px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+            <span>[ANRA Technologies]</span>
+          </div>
+          <div class="wf-placeholder-box" style="flex: 0 0 250px; height: 150px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+            <span>[Lassen Peak]</span>
+          </div>
+          <div class="wf-placeholder-box" style="flex: 0 0 250px; height: 150px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+            <span>[Novella]</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8 — Footer -->
+
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+                            <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Team</a>
+                <a href="our-approach.html">Our Approach</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+                            <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="equity-fund.html">Equity Fund</a>
+                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              </nav>
+            </div>
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect With Us</h3>
+              <ul class="wf-email-list">
+                <li>
+                  <span class="wf-email-label">For Founders:</span> 
+                  <a href="mailto:dealflow@lioncrest.vc" class="wf-email-address">dealflow@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Prospective Investors:</span> 
+                  <a href="mailto:investors@lioncrest.vc" class="wf-email-address">investors@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Everything Else:</span> 
+                  <a href="mailto:contact@lioncrest.vc" class="wf-email-address">contact@lioncrest.vc</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+      
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
