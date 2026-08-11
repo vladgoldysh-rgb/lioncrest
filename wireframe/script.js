@@ -68,4 +68,34 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Case Study Tab Logic
+  const tabContainers = document.querySelectorAll('.wf-case-tabs');
+  
+  tabContainers.forEach(container => {
+    const tabs = container.querySelectorAll('.wf-case-tab');
+    // Find the next sibling that contains the content blocks
+    let contentContainer = container.nextElementSibling;
+    while (contentContainer && !contentContainer.querySelector('.wf-case-content')) {
+      contentContainer = contentContainer.nextElementSibling;
+    }
+    
+    if (contentContainer) {
+      const contents = contentContainer.querySelectorAll('.wf-case-content');
+      
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+          // Remove active class from all
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to selected
+          tab.classList.add('active');
+          if (contents[index]) {
+            contents[index].classList.add('active');
+          }
+        });
+      });
+    }
+  });
 });

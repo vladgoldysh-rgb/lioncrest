@@ -735,3 +735,100 @@ ul {
 textarea.wf-input {
   resize: vertical;
 }
+
+/* Case Study Switcher */
+.wf-case-tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 32px;
+}
+.wf-case-tab {
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #999;
+  cursor: pointer;
+  position: relative;
+}
+.wf-case-tab.active {
+  color: #111;
+}
+.wf-case-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #111;
+}
+.wf-case-content {
+  display: none;
+}
+.wf-case-content.active {
+  display: block;
+}
+.wf-case-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 48px;
+}
+.wf-case-visual {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+}
+.wf-case-header {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.wf-case-points {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.wf-case-point {
+  display: flex;
+  gap: 16px;
+}
+.wf-case-point-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+.wf-case-point-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #666;
+}
+.wf-case-point-text {
+  color: #333;
+  line-height: 1.5;
+}
+.wf-case-quote {
+  padding: 24px;
+  background: #f9f9f9;
+  border-left: 4px solid #333;
+  margin-bottom: 24px;
+  font-style: italic;
+  color: #666;
+}
+.wf-case-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: #111;
+  color: #fff;
+  font-weight: 600;
+}
