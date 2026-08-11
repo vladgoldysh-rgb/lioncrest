@@ -267,14 +267,20 @@ ul {
 }
 .wf-nav {
   display: flex;
-  gap: 24px;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
 }
+.wf-nav > a, .wf-nav > div {
+  margin-right: 24px;
+}
+.wf-nav > *:last-child {
+  margin-right: 0;
+}
 .wf-nav > a {
   font-size: 14px;
   font-weight: 500;
+  display: inline-block;
 }
 .wf-dropdown {
   position: relative;
@@ -613,11 +619,15 @@ ul {
 .wf-footer-column nav {
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 .wf-footer-column nav a {
   font-size: 14px;
   font-weight: 500;
+  display: block;
+  margin-bottom: 12px;
+}
+.wf-footer-column nav a:last-child {
+  margin-bottom: 0;
 }
 .wf-email-list {
   display: flex;
