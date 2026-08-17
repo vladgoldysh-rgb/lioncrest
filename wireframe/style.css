@@ -950,7 +950,7 @@ textarea.wf-input {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  margin-top: 32px;
+  margin-top: 12px;
 }
 .wf-founder-card {
   border: 1px solid #ddd;
