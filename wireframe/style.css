@@ -328,6 +328,45 @@ ul {
   background: #f5f5f5;
 }
 
+/* Investor Login dropdown (right-aligned) */
+.wf-login-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.wf-login-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 8px 0;
+  min-width: 200px;
+  display: none;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.wf-login-dropdown:hover .wf-login-dropdown-menu {
+  display: block;
+}
+.wf-login-dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+.wf-login-dropdown-menu a:hover {
+  background: #f5f5f5;
+  border-left-color: #111;
+}
+.wf-login-dropdown-menu .wf-login-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 4px 0;
+}
+
 /* =========================================
    Section 2 — Hero
    ========================================= */
