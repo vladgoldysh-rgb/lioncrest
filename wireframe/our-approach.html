@@ -210,43 +210,31 @@
         </div>
 
         <!-- Two-column grid: Left = Metrics, Right = Hero photo card -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
-          <!-- Left Column: Platform Performance -->
-          <div>
-
-            <h3 style="font-size: 24px; font-weight: 700; margin-top: 0; margin-bottom: 12px; color: #111; letter-spacing: -0.5px;">Platform Performance</h3>
-            <p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 32px;">Capital deployment and underwriting scale across our equity and credit strategies — built with discipline and conviction.</p>
-
-            <div style="display: flex; flex-direction: column; gap: 24px;">
-              <div style="display: flex; align-items: flex-start; gap: 16px; border-bottom: 1px solid #eee; padding-bottom: 24px;">
-                <div style="border-left: 3px solid #111; padding-left: 16px;">
-                  <div style="font-size: 36px; font-weight: 800; color: #111; line-height: 1;">$220M+</div>
-                  <div style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 600; margin-top: 6px; letter-spacing: 0.5px;">Capital Deployed</div>
-                </div>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: 16px; border-bottom: 1px solid #eee; padding-bottom: 24px;">
-                <div style="border-left: 3px solid #111; padding-left: 16px;">
-                  <div style="font-size: 36px; font-weight: 800; color: #111; line-height: 1;">45+</div>
-                  <div style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 600; margin-top: 6px; letter-spacing: 0.5px;">Active Portfolio Companies</div>
-                </div>
-              </div>
-              <div>
-                <div style="border-left: 3px solid #111; padding-left: 16px;">
-                  <div style="font-size: 36px; font-weight: 800; color: #111; line-height: 1;">15+ Yrs</div>
-                  <div style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 600; margin-top: 6px; letter-spacing: 0.5px;">Combined Track Record</div>
-                </div>
-              </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch;">
+          <!-- Left Column: Metrics only -->
+          <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 0;">
+            <div style="border-left: 3px solid #111; padding-left: 20px; padding-top: 12px; padding-bottom: 24px; border-bottom: 1px solid #eee;">
+              <div style="font-size: 48px; font-weight: 800; color: #111; line-height: 1;">$220M+</div>
+              <div style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 600; margin-top: 8px; letter-spacing: 0.5px;">Capital Deployed</div>
+            </div>
+            <div style="border-left: 3px solid #111; padding-left: 20px; padding-top: 24px; padding-bottom: 24px; border-bottom: 1px solid #eee;">
+              <div style="font-size: 48px; font-weight: 800; color: #111; line-height: 1;">45+</div>
+              <div style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 600; margin-top: 8px; letter-spacing: 0.5px;">Active Portfolio Companies</div>
+            </div>
+            <div style="border-left: 3px solid #111; padding-left: 20px; padding-top: 24px;">
+              <div style="font-size: 48px; font-weight: 800; color: #111; line-height: 1;">15+ Yrs</div>
+              <div style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 600; margin-top: 8px; letter-spacing: 0.5px;">Combined Track Record</div>
             </div>
           </div>
 
-          <!-- Right Column: Leib & Ryan Hero-style photo + quote -->
-          <div class="wf-hero-image-container" style="position: relative; height: auto; min-width: 0;">
-            <div class="wf-placeholder-box wf-hero-shared-photo" style="aspect-ratio: 4/3; height: auto; width: 100%; background: #eee; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #999; padding: 60px 0; position: relative;">
+          <!-- Right Column: Leib & Ryan photo stretched to full height -->
+          <div style="position: relative; min-width: 0; min-height: 0;">
+            <div style="position: absolute; inset: 0; background: #eee; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #999;">
               <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 12px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              <span>[Photo — Leib Bolel &amp; Ryan Edwards]</span>
+              <span style="font-size: 13px;">[Photo — Leib Bolel &amp; Ryan Edwards]</span>
             </div>
-            <div class="wf-quote-overlay" style="position: absolute; bottom: 24px; left: 24px; width: calc(100% - 48px); padding: 24px 28px; background: #fff; border: 1px solid #ccc; text-align: left;">
-              <blockquote style="margin: 0; font-size: 14px; color: #333; line-height: 1.5; font-style: italic; margin-bottom: 16px;">
+            <div style="position: absolute; bottom: 24px; left: 24px; width: calc(100% - 48px); padding: 20px 24px; background: #fff; border: 1px solid #ccc;">
+              <blockquote style="margin: 0; font-size: 13px; color: #333; line-height: 1.5; font-style: italic; margin-bottom: 12px;">
                 "Different growth stages require different underwriting models. We unified equity and credit under one platform so founders don't have to dilute to survive, and LPs capture optimized yield."
               </blockquote>
               <cite style="display: block; font-size: 11px; font-weight: 700; color: #111; text-transform: uppercase;">
