@@ -14,6 +14,7 @@ body {
   display: flex;
   height: 100vh;
   overflow: hidden; /* Canvas handles scroll */
+  padding-top: 40px;
 }
 
 a {
@@ -852,16 +853,21 @@ textarea.wf-input {
    Version Toggles & Layout Enhancements (v2.0)
    ========================================= */
 .wf-version-tabs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
   display: flex;
   background-color: #1a1a1a;
   color: #fff;
   padding: 0 5%;
-  height: 40px;
   align-items: center;
   gap: 8px;
   font-size: 12px;
   font-weight: 500;
   border-bottom: 1px solid #333;
+  z-index: 10000;
 }
 .wf-version-tab {
   color: #999;
