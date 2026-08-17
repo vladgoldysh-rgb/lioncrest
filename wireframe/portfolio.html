@@ -18,7 +18,7 @@
       <h1>Lioncrest — Website Wireframe Spec</h1>
     </header>
     
-        <nav class="page-list">
+            <nav class="page-list">
       <h2>Pages</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -59,7 +59,7 @@
         <div class="wf-logo">LIONCREST</div>
         <nav class="wf-nav">
           <a href="index.html">Home</a>
-          <a href="portfolio.html" class="active">Portfolio</a>
+          <a href="portfolio.html" class="active" class="active">Portfolio</a>
           <a href="team.html">Team</a>
           <div class="wf-dropdown">
             <a href="#">Our Funds &#9662;</a>
@@ -71,7 +71,7 @@
           <a href="our-approach.html">Our Approach</a>
           <a href="insights-hub.html">Insights</a>
         </nav>
-        <div class="wf-login-dropdown"><a href="#" class="wf-btn-secondary">Investor Login <a href="#" class="wf-btn-secondary">Investor Login &#9662;</a>#9662;</a><div class="wf-login-dropdown-menu"><a href="#"><a href="#" class="wf-btn-secondary">Investor Login &#9662;</a>#x1F5C2;<a href="#" class="wf-btn-secondary">Investor Login &#9662;</a>nbsp; Venture Fund Portal</a><hr class="wf-login-divider"><a href="#"><a href="#" class="wf-btn-secondary">Investor Login &#9662;</a>#x1F4CA;<a href="#" class="wf-btn-secondary">Investor Login &#9662;</a>nbsp; Prospeq Credit Portal</a></div></div>
+        <div class="wf-login-dropdown"><a href="#" class="wf-btn-secondary">Investor Login &#9662;</a><div class="wf-login-dropdown-menu"><a href="#">&#x1F5C2;&nbsp; Venture Fund Portal</a><hr class="wf-login-divider"><a href="#">&#x1F4CA;&nbsp; Prospeq Credit Portal</a></div></div>
       </header>
 
       <!-- Section 1 — Filter Bar -->
@@ -101,7 +101,7 @@
         <div class="wf-founder-grid">
           
           <!-- Card 1 -->
-          <div class="wf-founder-card">
+          <div class="wf-founder-card" style="cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
             <div class="wf-founder-image">
               <span class="wf-founder-badge">Funded by Venture Fund</span>
               <span>[Photo — Amit Ganjoo]</span>
@@ -114,7 +114,7 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="wf-founder-card">
+          <div class="wf-founder-card" style="cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
             <div class="wf-founder-image">
               <span class="wf-founder-badge">Funded by Prospeq Credit Fund</span>
               <span>[Photo — Reham Fagiri]</span>
@@ -127,7 +127,7 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="wf-founder-card">
+          <div class="wf-founder-card" style="cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
             <div class="wf-founder-image">
               <span class="wf-founder-badge">Funded by Venture Fund</span>
               <span>[Photo — Lassen Peak Founder]</span>
@@ -140,7 +140,7 @@
           </div>
 
           <!-- Card 4 -->
-          <div class="wf-founder-card">
+          <div class="wf-founder-card" style="cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
             <div class="wf-founder-image">
               <span class="wf-founder-badge">Funded by Prospeq Credit Fund</span>
               <span>[Photo — Asif Alam]</span>
@@ -155,7 +155,47 @@
         </div>
       </section>
 
-      <!-- Section 3 — Universal CTA Block -->
+      
+      <!-- Section 3 — Company Preview Modal (Stage 1) -->
+      <div id="portfolio-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 24px;">
+          <div style="background: #fff; max-width: 800px; margin: 0 auto; padding: 48px; position: relative;">
+            <button onclick="document.getElementById('portfolio-modal').style.display='none'" style="position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: #666;">&times;</button>
+            
+            <div style="display: flex; gap: 48px; flex-wrap: wrap;">
+              <div style="flex: 1; min-width: 250px;">
+                <div class="wf-placeholder-box" style="width: 150px; height: 60px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; margin-bottom: 24px;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+                  <span>[PAXAFE LOGO]</span>
+                </div>
+                <h3 style="font-size: 24px; margin-bottom: 16px;">PAXAFE</h3>
+                <p style="font-size: 16px; color: #555; line-height: 1.5; margin-bottom: 32px;">[PLACEHOLDER &mdash; pull from existing portfolio descriptions where available, e.g. "AI-driven platform for cold chain shippers" for PAXAFE]</p>
+                <a href="portfolio-detail.html" class="wf-btn">View Company Profile</a>
+              </div>
+              
+              <div style="flex: 1; min-width: 250px;">
+                <div style="margin-bottom: 24px;">
+                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Industries</strong>
+                  <p style="font-size: 16px;">[PLACEHOLDER &mdash; matches sector tags]</p>
+                </div>
+                <div style="margin-bottom: 24px;">
+                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Milestones</strong>
+                  <p style="font-size: 16px;">[PLACEHOLDER &mdash; e.g. "Lioncrest investment: 2024"]</p>
+                </div>
+                <div>
+                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Founders</strong>
+                  <p style="font-size: 16px;">[PLACEHOLDER &mdash; names where known, e.g. from existing Prospeq founder list]</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Modal Navigation -->
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 24px; margin-top: 48px;">
+              <a href="#" style="text-decoration: none; color: #666; font-size: 14px;">&larr; Lassen Peak</a>
+              <a href="#" style="text-decoration: none; color: #666; font-size: 14px;">Novella &rarr;</a>
+            </div>
+          </div>
+      </div>
+
+      <!-- Section 4 — Universal CTA Block -->
       <section class="wf-section" style="padding-top: 0;">
         <div class="wf-universal-cta">
           <div class="wf-cta-card">
@@ -194,9 +234,10 @@
               <h3 class="wf-footer-column-title">Overview</h3>
               <nav>
                 <a href="index.html">Home</a>
-                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="portfolio.html" class="active" class="active">Portfolio</a>
                 <a href="team.html">Team</a>
                 <a href="our-approach.html">Our Approach</a>
+                <a href="insights-hub.html">News &amp; Insights</a>
               </nav>
             </div>
             

@@ -917,6 +917,7 @@ textarea.wf-input {
   color: #fff;
   padding: 0 5%;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 12px;
   font-weight: 500;
