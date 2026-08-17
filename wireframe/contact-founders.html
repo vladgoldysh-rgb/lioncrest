@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Founders — Lioncrest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Version Toggles -->
+  <div class="wf-version-tabs">
+    <a href="#" class="wf-version-tab active">New Version</a>
+    <a href="#" class="wf-version-tab disabled">Old Version</a>
+  </div>
+
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+    <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-approach.html">Our Approach</a></li>
+        <li><a href="equity-fund.html">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="insights-hub.html">Insights</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Change Log (v2.0)</h2>
+      <div class="insight-item">
+        <strong>[NEW PAGE] Founder Application Hub</strong>
+        <p>Created a centralized hub for all founder inquiries. In the old wireframe, forms were scattered across the fund pages, making it hard to manage. Now, they are housed on one page with a simple tab switch.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Fund Specific Criteria Selection</strong>
+        <p>Divided the applications into two distinct tabs:
+          * **Equity Fund:** Asks for "Current ARR" (Seed+/Series A qualification) and specific vertical sectors (Cyber, Fintech, etc.).
+          * **Credit Fund (Prospeq):** Asks for "Annual Revenue" categories ($2M-$5M, $5M-$10M, $10M+) to match debt underwriting standards.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Context-Aware Pre-selection</strong>
+        <p>The tabs are driven by a simple URL query parameter (e.g. `?fund=credit`), automatically opening the correct fund form when a founder navigates here from the corresponding fund detail page.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Cross-Link Disclaimer</strong>
+        <p>Added a clear link directing LPs to their relations hub to prevent qualification pollution.</p>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+        <nav class="wf-nav">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="team.html">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds</a>
+            <div class="wf-dropdown-menu">
+              <a href="equity-fund.html">Equity Fund</a>
+              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+            </div>
+          </div>
+          <a href="our-approach.html">Our Approach</a>
+          <a href="insights-hub.html">Insights</a>
+        </nav>
+        <a href="#" class="wf-btn-secondary">Investor Login</a>
+      </header>
+
+      <!-- Hero Header -->
+      <section class="wf-section" style="padding-bottom: 32px; border-bottom: none;">
+        <div class="wf-eyebrow">FOUNDER INQUIRY</div>
+        <h2 style="font-size: 36px; font-weight: 800; margin-top: 8px; margin-bottom: 16px;">Partner With Lioncrest</h2>
+        <p style="font-size: 16px; color: #666; max-width: 600px;">Tell us about your company. Select the fund that matches your growth profile to qualify your application directly with our investment teams.</p>
+      </section>
+
+      <!-- Tabbed Container -->
+      <section class="wf-section" style="padding-top: 0;">
+        <div class="wf-tab-container">
+          <div class="wf-form-tabs">
+            <div id="tab-btn-equity" class="wf-form-tab active" onclick="switchFounderTab('equity')">Equity Fund</div>
+            <div id="tab-btn-credit" class="wf-form-tab" onclick="switchFounderTab('credit')">Credit Fund (Prospeq)</div>
+          </div>
+          
+          <!-- Tab 1: Equity Fund Form -->
+          <div id="form-equity" class="wf-form-content active">
+            <form style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Name</label>
+                  <input type="text" placeholder="Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Work Email</label>
+                  <input type="email" placeholder="Work Email" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Company Name</label>
+                  <input type="text" placeholder="Company Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Current ARR</label>
+                  <input type="text" placeholder="e.g. $1.8M ARR" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+              </div>
+              <div>
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Primary Sector</label>
+                <select style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; background: #fff; border-radius: 4px;">
+                  <option>Select...</option>
+                  <option>Fintech</option>
+                  <option>Cybersecurity</option>
+                  <option>Digital Health</option>
+                  <option>Supply Chain/Logistics</option>
+                  <option>Defense/Gov Tech</option>
+                  <option>LegalTech</option>
+                </select>
+              </div>
+              <div>
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Short pitch / Message</label>
+                <textarea rows="4" placeholder="Tell us about your mission..." style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; resize: vertical; border-radius: 4px;"></textarea>
+              </div>
+              <button type="button" style="padding: 16px; background: #111; color: #fff; border: none; font-weight: 600; font-size: 15px; border-radius: 4px; cursor: pointer; transition: background 0.2s;">Submit Equity Application</button>
+            </form>
+          </div>
+
+          <!-- Tab 2: Credit Fund Form -->
+          <div id="form-credit" class="wf-form-content">
+            <form style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Name</label>
+                  <input type="text" placeholder="Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Work Email</label>
+                  <input type="email" placeholder="Work Email" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Company Name</label>
+                  <input type="text" placeholder="Company Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Annual Revenue</label>
+                  <select style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; background: #fff; border-radius: 4px;">
+                    <option>Select...</option>
+                    <option>$2M - $5M</option>
+                    <option>$5M - $10M</option>
+                    <option>$10M+</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Message / Financing Requirements</label>
+                <textarea rows="4" placeholder="How will this capital be used to optimize operations or scale?" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; resize: vertical; border-radius: 4px;"></textarea>
+              </div>
+              <button type="button" style="padding: 16px; background: #111; color: #fff; border: none; font-weight: 600; font-size: 15px; border-radius: 4px; cursor: pointer; transition: background 0.2s;">Submit Credit Application</button>
+            </form>
+          </div>
+        </div>
+
+        <div style="margin-top: 32px; text-align: center;">
+          <p style="font-size: 14px; color: #777;">
+            📧 Prefer direct email? Reach dealflow at <a href="mailto:dealflow@lioncrest.vc" style="color: #111; font-weight: 600; text-decoration: underline;">dealflow@lioncrest.vc</a> (Equity) or <a href="mailto:ryan@lioncrest.vc" style="color: #111; font-weight: 600; text-decoration: underline;">ryan@lioncrest.vc</a> (Credit)
+          </p>
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #eee;">
+            <p style="font-size: 13px; color: #666; font-style: italic;">
+              Are you a Limited Partner seeking investor relations? This route is reserved for founders. Please visit our <a href="contact-lp.html" style="color: #111; font-weight: 600; text-decoration: underline;">LP Relations Hub →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Team</a>
+                <a href="our-approach.html">Our Approach</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="equity-fund.html">Equity Fund</a>
+                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect</h3>
+              <nav>
+                <a href="contact-lp.html">For LPs</a>
+                <a href="contact-founders.html">For Founders</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Context-aware query parameters parsing
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const fund = params.get('fund');
+      if (fund === 'credit') {
+        switchFounderTab('credit');
+      } else {
+        switchFounderTab('equity');
+      }
+    });
+
+    function switchFounderTab(tabId) {
+      document.querySelectorAll('.wf-form-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelectorAll('.wf-form-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      if (tabId === 'credit') {
+        document.getElementById('tab-btn-credit').classList.add('active');
+        document.getElementById('form-credit').classList.add('active');
+      } else {
+        document.getElementById('tab-btn-equity').classList.add('active');
+        document.getElementById('form-equity').classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lioncrest Events — Private RSVP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Version Toggles -->
+  <div class="wf-version-tabs">
+    <a href="#" class="wf-version-tab active">New Version</a>
+    <a href="#" class="wf-version-tab disabled">Old Version</a>
+  </div>
+
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+    <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-approach.html">Our Approach</a></li>
+        <li><a href="equity-fund.html">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="insights-hub.html">Insights</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Change Log (v2.0)</h2>
+      <div class="insight-item">
+        <strong>[NEW PAGE] Private Event Landing Page</strong>
+        <p>Created an invite-only event template to support the fund's investor relations program. Previously, registration forms lived on external platforms (like Eventbrite), which looked unprofessional and lost analytics data.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Cyndee's Registration Embed Flow</strong>
+        <p>Designed a clean, unlisted landing template that hosts custom registration iframe widgets natively on the Lioncrest domain. The URL remains hidden from search engine crawlers (noindex meta tag) for privacy.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Event Overview Grid</strong>
+        <p>A quick-reference section highlighting date, venue location, schedule, and attendee profile parameters to answer logistical questions instantly.</p>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+        <nav class="wf-nav">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="team.html">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds</a>
+            <div class="wf-dropdown-menu">
+              <a href="equity-fund.html">Equity Fund</a>
+              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+            </div>
+          </div>
+          <a href="our-approach.html">Our Approach</a>
+          <a href="insights-hub.html">Insights</a>
+        </nav>
+        <a href="#" class="wf-btn-secondary">Investor Login</a>
+      </header>
+
+      <!-- Hero Header -->
+      <section class="wf-section" style="padding-bottom: 32px; border-bottom: none;">
+        <div class="wf-eyebrow" style="color: #c62828;">INVITATION ONLY • UNLISTED URL</div>
+        <h2 style="font-size: 36px; font-weight: 800; margin-top: 8px; margin-bottom: 16px;">Lioncrest Annual LP Summit 2026</h2>
+        <p style="font-size: 16px; color: #666; max-width: 650px;">A private gathering for Lioncrest Limited Partners, investment partners, and portfolio CEOs to review fund progress and discuss B2B technology growth trends.</p>
+      </section>
+
+      <!-- Event Details Grid -->
+      <section class="wf-section" style="padding-top: 0; padding-bottom: 48px;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; border: 1px solid #ddd; padding: 24px; border-radius: 4px; background: #fafafa;">
+          <div>
+            <span style="font-size: 12px; text-transform: uppercase; color: #777; font-weight: 600; display: block; margin-bottom: 4px;">Date & Time</span>
+            <strong style="font-size: 15px; color: #111;">November 12, 2026<br>9:00 AM – 4:00 PM EST</strong>
+          </div>
+          <div>
+            <span style="font-size: 12px; text-transform: uppercase; color: #777; font-weight: 600; display: block; margin-bottom: 4px;">Venue Location</span>
+            <strong style="font-size: 15px; color: #111;">The Plaza Hotel, NYC<br>Fifth Avenue at Central Park</strong>
+          </div>
+          <div>
+            <span style="font-size: 12px; text-transform: uppercase; color: #777; font-weight: 600; display: block; margin-bottom: 4px;">Audience Profile</span>
+            <strong style="font-size: 15px; color: #111;">Limited Partners<br>& Portfolio Founders</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Embedded RSVP Registration widget -->
+      <section class="wf-section" style="padding-top: 0;">
+        <div style="background: #fff; border: 2px dashed #ccc; border-radius: 6px; padding: 64px 32px; text-align: center;">
+          <span style="font-size: 48px; margin-bottom: 16px; display: block;">🎟️</span>
+          <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">Embedded RSVP Form Widget</h3>
+          <p style="color: #666; font-size: 14px; max-width: 500px; margin: 0 auto 24px; line-height: 1.5;">This section hosts Cyndee's custom HTML registration script (e.g. RSVPIFY or Lu.ma embed code) to capture guest details natively under our own domain name.</p>
+          <div style="max-width: 300px; margin: 0 auto; padding: 12px; border: 1px solid #eee; border-radius: 4px; font-size: 11px; text-transform: uppercase; color: #888; letter-spacing: 0.5px; background: #fafafa;">
+            SSL Secured Integration
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Team</a>
+                <a href="our-approach.html">Our Approach</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="equity-fund.html">Equity Fund</a>
+                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect</h3>
+              <nav>
+                <a href="contact-lp.html">For LPs</a>
+                <a href="contact-founders.html">For Founders</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

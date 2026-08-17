@@ -6,13 +6,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Version Toggles -->
+  <div class="wf-version-tabs">
+    <a href="#" class="wf-version-tab active">New Version</a>
+    <a href="old/portfolio.html" class="wf-version-tab">Old Version</a>
+  </div>
+
   <!-- Sidebar Panel -->
   <aside class="sidebar">
     <header class="sidebar-header">
       <h1>Lioncrest — Website Wireframe Spec</h1>
     </header>
     
-        <nav class="page-list">
+    <nav class="page-list">
       <h2>Pages</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -20,40 +26,32 @@
         <li><a href="equity-fund.html">Equity Fund</a></li>
         <li><a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a></li>
         <li><a href="team.html">Team</a></li>
-        <li><a href="team-detail.html">Team Member Detail</a></li>
         <li><a href="portfolio.html" class="active">Portfolio</a></li>
-        <li><a href="portfolio-detail.html">Portfolio Profile Page</a></li>
+        <li><a href="insights-hub.html">Insights</a></li>
       </ul>
     </nav>
     
     <section class="insights-panel">
-      <h2>Insights & Notes</h2>
-
+      <h2>Change Log (v2.0)</h2>
       <div class="insight-item">
-        <strong>Page Note</strong>
-        <p>Two-stage interaction pattern, directly modeled on Lux Capital's portfolio page. Stage 1 is a quick-preview modal (opens on top of the grid, doesn't navigate away), Stage 2 is a full company profile page (separate URL, reached via "View Company Profile" inside the modal). Faster to build and matches exactly how Lux Capital &mdash; one of the reference brands you named &mdash; does it.</p>
+        <strong>Centralized LP/Founder CTA</strong>
+        <p>Replaced the custom input form at the bottom of the page with our universal double-fund CTA block. This routes prospective LPs or tech founders to the correct contact hubs cleanly.</p>
       </div>
       <div class="insight-item">
-        <strong>Interaction Guide &mdash; Company Preview Modal</strong>
-        <p>Clicking on any company card in the grid opens a quick-preview modal overlay with a dimmed background (Stage 1). You do not navigate to a new page. Prev/next navigation lives inside the modal so a visitor can browse company to company without closing it &mdash; exactly like the Lux Capital pattern.</p>
+        <strong>Portrait Founder Storytelling</strong>
+        <p>Upgraded the portfolio from generic company logo shapes to custom founder portrait cards ("Funding Founders, Not Logos"). LPs and other founders scan real faces with specific "How We Helped" text, reinforcing execution credibility.</p>
       </div>
-      <div class="insight-item">
-        <strong>Section 2 &mdash; Get In Touch</strong>
-        <p>Someone browsing the Portfolio page is likely either an LP doing diligence or a founder scoping out who else you've backed &mdash; either way, they might want to reach out right from here instead of hunting for a contact page. Same short-form pattern as the rest of the site.</p>
-      </div>
-
     </section>
   </aside>
 
   <!-- Main Canvas Panel -->
   <main class="canvas">
-
     <div class="wireframe-page">
       
       <!-- Section 1 — Header -->
       <header class="wf-section wf-header">
         <div class="wf-logo">LIONCREST</div>
-                <nav class="wf-nav">
+        <nav class="wf-nav">
           <a href="index.html">Home</a>
           <a href="portfolio.html" class="active">Portfolio</a>
           <a href="team.html">Team</a>
@@ -65,127 +63,120 @@
             </div>
           </div>
           <a href="our-approach.html">Our Approach</a>
+          <a href="insights-hub.html">Insights</a>
         </nav>
         <a href="#" class="wf-btn-secondary">Investor Login</a>
       </header>
 
-      
-      
-
       <!-- Section 1 — Filter Bar -->
       <section class="wf-section wf-hero-new" style="border-bottom: 1px solid #eee; padding-bottom: 24px;">
-        <h2 class="wf-section-title" style="font-size: 48px; margin-bottom: 32px;">Portfolio</h2>
+        <h2 class="wf-section-title" style="font-size: 44px; margin-bottom: 32px; color: #111;">Portfolio</h2>
         <div class="wf-filter-bar" style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center;">
           <div style="display: flex; gap: 24px; flex: 1;">
-            <a href="#" style="text-decoration: none; color: #111; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #111; margin-bottom: -2px;">All</a>
+            <a href="#" style="text-decoration: none; color: #111; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #111; margin-bottom: -2px;">All Funds</a>
             <a href="#" style="text-decoration: none; color: #666; font-weight: 600; padding-bottom: 8px;">Equity Fund</a>
-            <a href="#" style="text-decoration: none; color: #666; font-weight: 600; padding-bottom: 8px;">Prospeq &mdash; Credit Fund</a>
+            <a href="#" style="text-decoration: none; color: #666; font-weight: 600; padding-bottom: 8px;">Credit Fund</a>
           </div>
           <div style="display: flex; gap: 16px;">
-            <select class="wf-input" style="padding: 8px 12px; border: 1px solid #ccc; font-family: inherit; width: 150px;">
-              <option>Industry</option>
-              <option>B2B</option>
-              <option>B2C</option>
+            <select class="wf-input" style="padding: 8px 12px; border: 1px solid #ccc; font-family: inherit; width: 150px; background: #fff;">
+              <option>All Sectors</option>
+              <option>Fintech</option>
+              <option>Cybersecurity</option>
+              <option>Logistics</option>
               <option>SaaS</option>
-              <option>Hardware</option>
             </select>
-            <input type="text" class="wf-input" placeholder="Search by name" style="padding: 8px 12px; border: 1px solid #ccc; font-family: inherit; width: 200px;">
+            <input type="text" class="wf-input" placeholder="Search portfolio..." style="padding: 8px 12px; border: 1px solid #ccc; font-family: inherit; width: 200px;">
           </div>
         </div>
       </section>
 
-      <!-- Section 2 — Company Grid -->
+      <!-- Section 2 — Company Grid (Upgraded to custom founder portrait cards) -->
       <section class="wf-section">
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px;">
-          <!-- 8 Companies -->
-          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <span>[ANRA Technologies]</span>
+        <div class="wf-founder-grid">
+          
+          <!-- Card 1 -->
+          <div class="wf-founder-card">
+            <div class="wf-founder-image">
+              <span class="wf-founder-badge">Venture Fund</span>
+              <span>[Photo — Amit Ganjoo]</span>
+            </div>
+            <div class="wf-founder-content">
+              <h3 class="wf-founder-name">Amit Ganjoo</h3>
+              <div class="wf-founder-company">ANRA Technologies (UAS Airspace Management)</div>
+              <p class="wf-founder-story">Helping operators globally coordinate airspace safe. Active board seat support from Leib Bolel.</p>
+            </div>
           </div>
-          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <span>[Lassen Peak]</span>
+
+          <!-- Card 2 -->
+          <div class="wf-founder-card">
+            <div class="wf-founder-image">
+              <span class="wf-founder-badge">Prospeq Fund</span>
+              <span>[Photo — Reham Fagiri]</span>
+            </div>
+            <div class="wf-founder-content">
+              <h3 class="wf-founder-name">Reham Fagiri</h3>
+              <div class="wf-founder-company">AptDeco (Logistics Orchestration Platform)</div>
+              <p class="wf-founder-story">Underwrote structured credit lines to scale warehouse routing systems without dilution.</p>
+            </div>
           </div>
-          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <span>[PAXAFE]</span>
+
+          <!-- Card 3 -->
+          <div class="wf-founder-card">
+            <div class="wf-founder-image">
+              <span class="wf-founder-badge">Venture Fund</span>
+              <span>[Photo — Lassen Peak Founder]</span>
+            </div>
+            <div class="wf-founder-content">
+              <h3 class="wf-founder-name">Public Safety Tech</h3>
+              <div class="wf-founder-company">Lassen Peak (Non-contact safety sensors)</div>
+              <p class="wf-founder-story">Underwrote early growth cycles to establish tactical safety compliance standards in local municipalities.</p>
+            </div>
           </div>
-          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <span>[Novella]</span>
+
+          <!-- Card 4 -->
+          <div class="wf-founder-card">
+            <div class="wf-founder-image">
+              <span class="wf-founder-badge">Prospeq Fund</span>
+              <span>[Photo — Asif Alam]</span>
+            </div>
+            <div class="wf-founder-content">
+              <h3 class="wf-founder-name">Asif Alam</h3>
+              <div class="wf-founder-company">Compliance.ai (Regulatory Search OS)</div>
+              <p class="wf-founder-story">Debt underwriting to build regulatory data pipelines and expand coverage grids.</p>
+            </div>
           </div>
-          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <span>[Upward]</span>
+
+        </div>
+      </section>
+
+      <!-- Section 3 — Universal CTA Block -->
+      <section class="wf-section" style="padding-top: 0;">
+        <div class="wf-universal-cta">
+          <div class="wf-cta-card">
+            <div>
+              <span class="wf-cta-eyebrow">For Limited Partners</span>
+              <h3 class="wf-cta-title">See How We Invest</h3>
+              <p class="wf-cta-desc">Access our track record, explore multi-strategy allocations, and request operational due diligence reports.</p>
+            </div>
+            <div class="wf-cta-footer">
+              <a href="contact-lp.html" style="font-weight: 700; text-decoration: underline;">Schedule a Meeting &rarr;</a>
+            </div>
           </div>
-          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <span>[Metafy]</span>
-          </div>
-          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <span>[AptDeco]</span>
-          </div>
-          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <span>[Compliance.ai]</span>
+          
+          <div class="wf-cta-card">
+            <div>
+              <span class="wf-cta-eyebrow">For Technology Founders</span>
+              <h3 class="wf-cta-title">Raise with Lioncrest</h3>
+              <p class="wf-cta-desc">Explore our venture or credit options. Apply directly to qualify your business for expansion capital.</p>
+            </div>
+            <div class="wf-cta-footer">
+              <a href="contact-founders.html" style="font-weight: 700; text-decoration: underline;">Apply for Funding &rarr;</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Section 3 — Company Preview Modal (Stage 1) -->
-      <div id="portfolio-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 24px;">
-          <div style="background: #fff; max-width: 800px; margin: 0 auto; padding: 48px; position: relative;">
-            <button onclick="document.getElementById('portfolio-modal').style.display='none'" style="position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: #666;">&times;</button>
-            
-            <div style="display: flex; gap: 48px; flex-wrap: wrap;">
-              <div style="flex: 1; min-width: 250px;">
-                <div class="wf-placeholder-box" style="width: 150px; height: 60px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; margin-bottom: 24px;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-                  <span>[PAXAFE LOGO]</span>
-                </div>
-                <h3 style="font-size: 24px; margin-bottom: 16px;">PAXAFE</h3>
-                <p style="font-size: 16px; color: #555; line-height: 1.5; margin-bottom: 32px;">[PLACEHOLDER &mdash; pull from existing portfolio descriptions where available, e.g. "AI-driven platform for cold chain shippers" for PAXAFE]</p>
-                <a href="portfolio-detail.html" class="wf-btn">View Company Profile</a>
-              </div>
-              
-              <div style="flex: 1; min-width: 250px;">
-                <div style="margin-bottom: 24px;">
-                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Industries</strong>
-                  <p style="font-size: 16px;">[PLACEHOLDER &mdash; matches sector tags]</p>
-                </div>
-                <div style="margin-bottom: 24px;">
-                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Milestones</strong>
-                  <p style="font-size: 16px;">[PLACEHOLDER &mdash; e.g. "Lioncrest investment: 2024"]</p>
-                </div>
-                <div>
-                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Founders</strong>
-                  <p style="font-size: 16px;">[PLACEHOLDER &mdash; names where known, e.g. from existing Prospeq founder list]</p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Modal Navigation -->
-            <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 24px; margin-top: 48px;">
-              <a href="#" style="text-decoration: none; color: #666; font-size: 14px;">&larr; Lassen Peak</a>
-              <a href="#" style="text-decoration: none; color: #666; font-size: 14px;">Novella &rarr;</a>
-            </div>
-          </div>
-      </div>
-
-      <!-- Section 5 — Get In Touch -->
-      <section class="wf-section" style="background: #f9f9f9; padding: 48px; border: 1px solid #eee; border-radius: 4px; margin-top: 64px;">
-        <div style="display: flex; flex-wrap: wrap; gap: 48px;">
-          <div style="flex: 1; min-width: 300px;">
-            <h2 class="wf-section-title" style="margin-bottom: 16px;">Get In Touch</h2>
-            <p style="font-size: 16px; margin-bottom: 32px; color: #555;">Curious about a company, or thinking you might be a fit? Reach out.</p>
-            <form style="display: flex; flex-direction: column; gap: 16px; max-width: 400px;">
-              <input type="text" class="wf-input" placeholder="Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
-              <input type="email" class="wf-input" placeholder="Work Email" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
-              <textarea class="wf-input" rows="4" placeholder="Message" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
-              <button type="button" class="wf-btn" style="width: 100%; padding: 16px; background: #111; color: #fff; font-weight: 600; border: none; font-size: 16px;">Submit</button>
-            </form>
-          </div>
-          <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; border-left: 1px solid #ddd; padding-left: 48px;">
-            <h3 style="font-size: 18px; margin-bottom: 16px;">Prefer email?</h3>
-            <p style="font-size: 16px; color: #555;">Reach us directly at:<br><a href="mailto:contact@lioncrest.vc" style="color: #111; font-weight: 600; text-decoration: none; margin-top: 8px; display: inline-block;">contact@lioncrest.vc</a></p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 8 — Footer -->
-
+      <!-- Footer -->
       <footer class="wf-section wf-footer">
         <div class="wf-footer-content">
           <div class="wf-footer-brand">
@@ -194,7 +185,7 @@
           
           <div class="wf-footer-links">
             <div class="wf-footer-column">
-                            <h3 class="wf-footer-column-title">Overview</h3>
+              <h3 class="wf-footer-column-title">Overview</h3>
               <nav>
                 <a href="index.html">Home</a>
                 <a href="portfolio.html" class="active">Portfolio</a>
@@ -204,28 +195,19 @@
             </div>
             
             <div class="wf-footer-column">
-                            <h3 class="wf-footer-column-title">Our Funds</h3>
+              <h3 class="wf-footer-column-title">Our Funds</h3>
               <nav>
                 <a href="equity-fund.html">Equity Fund</a>
                 <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
               </nav>
             </div>
+            
             <div class="wf-footer-column">
-              <h3 class="wf-footer-column-title">Connect With Us</h3>
-              <ul class="wf-email-list">
-                <li>
-                  <span class="wf-email-label">For Founders:</span> 
-                  <a href="mailto:dealflow@lioncrest.vc" class="wf-email-address">dealflow@lioncrest.vc</a>
-                </li>
-                <li>
-                  <span class="wf-email-label">For Prospective Investors:</span> 
-                  <a href="mailto:investors@lioncrest.vc" class="wf-email-address">investors@lioncrest.vc</a>
-                </li>
-                <li>
-                  <span class="wf-email-label">For Everything Else:</span> 
-                  <a href="mailto:contact@lioncrest.vc" class="wf-email-address">contact@lioncrest.vc</a>
-                </li>
-              </ul>
+              <h3 class="wf-footer-column-title">Connect</h3>
+              <nav>
+                <a href="contact-lp.html">For LPs</a>
+                <a href="contact-founders.html">For Founders</a>
+              </nav>
             </div>
           </div>
         </div>
@@ -234,7 +216,7 @@
           Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
         </div>
       </footer>
-      
+
     </div>
   </main>
 

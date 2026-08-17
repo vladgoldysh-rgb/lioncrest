@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio — Lioncrest</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- Version Toggles -->
+  <div class="wf-version-tabs">
+    <a href="../portfolio.html" class="wf-version-tab">New Version</a>
+    <a href="#" class="wf-version-tab active">Old Version</a>
+  </div>
+
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+        <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-approach.html">Our Approach</a></li>
+        <li><a href="equity-fund.html">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="team-detail.html">Team Member Detail</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="portfolio-detail.html">Portfolio Profile Page</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Insights & Notes</h2>
+
+      <div class="insight-item">
+        <strong>Page Note</strong>
+        <p>Two-stage interaction pattern, directly modeled on Lux Capital's portfolio page. Stage 1 is a quick-preview modal (opens on top of the grid, doesn't navigate away), Stage 2 is a full company profile page (separate URL, reached via "View Company Profile" inside the modal). Faster to build and matches exactly how Lux Capital &mdash; one of the reference brands you named &mdash; does it.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Interaction Guide &mdash; Company Preview Modal</strong>
+        <p>Clicking on any company card in the grid opens a quick-preview modal overlay with a dimmed background (Stage 1). You do not navigate to a new page. Prev/next navigation lives inside the modal so a visitor can browse company to company without closing it &mdash; exactly like the Lux Capital pattern.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Section 2 &mdash; Get In Touch</strong>
+        <p>Someone browsing the Portfolio page is likely either an LP doing diligence or a founder scoping out who else you've backed &mdash; either way, they might want to reach out right from here instead of hunting for a contact page. Same short-form pattern as the rest of the site.</p>
+      </div>
+
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+                <nav class="wf-nav">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html" class="active">Portfolio</a>
+          <a href="team.html">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds</a>
+            <div class="wf-dropdown-menu">
+              <a href="equity-fund.html">Equity Fund</a>
+              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+            </div>
+          </div>
+          <a href="our-approach.html">Our Approach</a>
+        </nav>
+        <a href="#" class="wf-btn-secondary">Investor Login</a>
+      </header>
+
+      
+      
+
+      <!-- Section 1 — Filter Bar -->
+      <section class="wf-section wf-hero-new" style="border-bottom: 1px solid #eee; padding-bottom: 24px;">
+        <h2 class="wf-section-title" style="font-size: 48px; margin-bottom: 32px;">Portfolio</h2>
+        <div class="wf-filter-bar" style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center;">
+          <div style="display: flex; gap: 24px; flex: 1;">
+            <a href="#" style="text-decoration: none; color: #111; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #111; margin-bottom: -2px;">All</a>
+            <a href="#" style="text-decoration: none; color: #666; font-weight: 600; padding-bottom: 8px;">Equity Fund</a>
+            <a href="#" style="text-decoration: none; color: #666; font-weight: 600; padding-bottom: 8px;">Prospeq &mdash; Credit Fund</a>
+          </div>
+          <div style="display: flex; gap: 16px;">
+            <select class="wf-input" style="padding: 8px 12px; border: 1px solid #ccc; font-family: inherit; width: 150px;">
+              <option>Industry</option>
+              <option>B2B</option>
+              <option>B2C</option>
+              <option>SaaS</option>
+              <option>Hardware</option>
+            </select>
+            <input type="text" class="wf-input" placeholder="Search by name" style="padding: 8px 12px; border: 1px solid #ccc; font-family: inherit; width: 200px;">
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 — Company Grid -->
+      <section class="wf-section">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px;">
+          <!-- 8 Companies -->
+          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+            <span>[ANRA Technologies]</span>
+          </div>
+          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+            <span>[Lassen Peak]</span>
+          </div>
+          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+            <span>[PAXAFE]</span>
+          </div>
+          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+            <span>[Novella]</span>
+          </div>
+          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+            <span>[Upward]</span>
+          </div>
+          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+            <span>[Metafy]</span>
+          </div>
+          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+            <span>[AptDeco]</span>
+          </div>
+          <div class="wf-placeholder-box" style="height: 120px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+            <span>[Compliance.ai]</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 — Company Preview Modal (Stage 1) -->
+      <div id="portfolio-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 24px;">
+          <div style="background: #fff; max-width: 800px; margin: 0 auto; padding: 48px; position: relative;">
+            <button onclick="document.getElementById('portfolio-modal').style.display='none'" style="position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: #666;">&times;</button>
+            
+            <div style="display: flex; gap: 48px; flex-wrap: wrap;">
+              <div style="flex: 1; min-width: 250px;">
+                <div class="wf-placeholder-box" style="width: 150px; height: 60px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; margin-bottom: 24px;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
+                  <span>[PAXAFE LOGO]</span>
+                </div>
+                <h3 style="font-size: 24px; margin-bottom: 16px;">PAXAFE</h3>
+                <p style="font-size: 16px; color: #555; line-height: 1.5; margin-bottom: 32px;">[PLACEHOLDER &mdash; pull from existing portfolio descriptions where available, e.g. "AI-driven platform for cold chain shippers" for PAXAFE]</p>
+                <a href="portfolio-detail.html" class="wf-btn">View Company Profile</a>
+              </div>
+              
+              <div style="flex: 1; min-width: 250px;">
+                <div style="margin-bottom: 24px;">
+                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Industries</strong>
+                  <p style="font-size: 16px;">[PLACEHOLDER &mdash; matches sector tags]</p>
+                </div>
+                <div style="margin-bottom: 24px;">
+                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Milestones</strong>
+                  <p style="font-size: 16px;">[PLACEHOLDER &mdash; e.g. "Lioncrest investment: 2024"]</p>
+                </div>
+                <div>
+                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Founders</strong>
+                  <p style="font-size: 16px;">[PLACEHOLDER &mdash; names where known, e.g. from existing Prospeq founder list]</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Modal Navigation -->
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 24px; margin-top: 48px;">
+              <a href="#" style="text-decoration: none; color: #666; font-size: 14px;">&larr; Lassen Peak</a>
+              <a href="#" style="text-decoration: none; color: #666; font-size: 14px;">Novella &rarr;</a>
+            </div>
+          </div>
+      </div>
+
+      <!-- Section 5 — Get In Touch -->
+      <section class="wf-section" style="background: #f9f9f9; padding: 48px; border: 1px solid #eee; border-radius: 4px; margin-top: 64px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 48px;">
+          <div style="flex: 1; min-width: 300px;">
+            <h2 class="wf-section-title" style="margin-bottom: 16px;">Get In Touch</h2>
+            <p style="font-size: 16px; margin-bottom: 32px; color: #555;">Curious about a company, or thinking you might be a fit? Reach out.</p>
+            <form style="display: flex; flex-direction: column; gap: 16px; max-width: 400px;">
+              <input type="text" class="wf-input" placeholder="Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+              <input type="email" class="wf-input" placeholder="Work Email" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit;">
+              <textarea class="wf-input" rows="4" placeholder="Message" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
+              <button type="button" class="wf-btn" style="width: 100%; padding: 16px; background: #111; color: #fff; font-weight: 600; border: none; font-size: 16px;">Submit</button>
+            </form>
+          </div>
+          <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; border-left: 1px solid #ddd; padding-left: 48px;">
+            <h3 style="font-size: 18px; margin-bottom: 16px;">Prefer email?</h3>
+            <p style="font-size: 16px; color: #555;">Reach us directly at:<br><a href="mailto:contact@lioncrest.vc" style="color: #111; font-weight: 600; text-decoration: none; margin-top: 8px; display: inline-block;">contact@lioncrest.vc</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8 — Footer -->
+
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+                            <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="team.html">Team</a>
+                <a href="our-approach.html">Our Approach</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+                            <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="equity-fund.html">Equity Fund</a>
+                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              </nav>
+            </div>
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect With Us</h3>
+              <ul class="wf-email-list">
+                <li>
+                  <span class="wf-email-label">For Founders:</span> 
+                  <a href="mailto:dealflow@lioncrest.vc" class="wf-email-address">dealflow@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Prospective Investors:</span> 
+                  <a href="mailto:investors@lioncrest.vc" class="wf-email-address">investors@lioncrest.vc</a>
+                </li>
+                <li>
+                  <span class="wf-email-label">For Everything Else:</span> 
+                  <a href="mailto:contact@lioncrest.vc" class="wf-email-address">contact@lioncrest.vc</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+      
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

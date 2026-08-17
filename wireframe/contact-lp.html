@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact LPs — Lioncrest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Version Toggles -->
+  <div class="wf-version-tabs">
+    <a href="#" class="wf-version-tab active">New Version</a>
+    <a href="#" class="wf-version-tab disabled">Old Version</a>
+  </div>
+
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+    <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-approach.html">Our Approach</a></li>
+        <li><a href="equity-fund.html">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="insights-hub.html">Insights</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Change Log (v2.0)</h2>
+      <div class="insight-item">
+        <strong>[NEW PAGE] LP Contact Hub</strong>
+        <p>Created a dedicated, standalone routing page for LPs. In the old wireframe, LPs were forced to use the same generic forms as founders, providing no clear path for booking introductory calls or sharing institutional due diligence details.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Dual Tabbed Layout</strong>
+        <p>Includes a "Book a Meeting" tab containing a Calendly embed and a "Send a Message" tab with a short contact form. LPs can choose their preferred engagement route immediately.</p>
+      </div>
+      <div class="insight-item">
+        <strong>LP-Specific Qualifications</strong>
+        <p>The message form fields are custom-tailored to ask for "Firm/Organization Name" and "Type of Investor" to filter out non-LP leads early.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Cross-Link Disclaimer</strong>
+        <p>Added a clear disclaimer at the bottom directing founders to their own application hub, removing any potential confusion.</p>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+        <nav class="wf-nav">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="team.html">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds</a>
+            <div class="wf-dropdown-menu">
+              <a href="equity-fund.html">Equity Fund</a>
+              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+            </div>
+          </div>
+          <a href="our-approach.html">Our Approach</a>
+          <a href="insights-hub.html">Insights</a>
+        </nav>
+        <a href="#" class="wf-btn-secondary">Investor Login</a>
+      </header>
+
+      <!-- Hero Header -->
+      <section class="wf-section" style="padding-bottom: 32px; border-bottom: none;">
+        <div class="wf-eyebrow">LIMITED PARTNER RELATIONS</div>
+        <h2 style="font-size: 36px; font-weight: 800; margin-top: 8px; margin-bottom: 16px;">Schedule a Conversation</h2>
+        <p style="font-size: 16px; color: #666; max-width: 600px;">Connect with our managing partners to explore our strategy, view fund performance, or request operational due diligence materials.</p>
+      </section>
+
+      <!-- Tabbed Container -->
+      <section class="wf-section" style="padding-top: 0;">
+        <div class="wf-tab-container">
+          <div class="wf-form-tabs">
+            <div class="wf-form-tab active" onclick="switchFormTab('book-meeting')">Book a Meeting</div>
+            <div class="wf-form-tab" onclick="switchFormTab('send-message')">Send a Message</div>
+          </div>
+          
+          <!-- Tab 1: Calendly Embed -->
+          <div id="book-meeting" class="wf-form-content active">
+            <div style="background: #fafafa; border: 2px dashed #ddd; height: 350px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-radius: 4px; padding: 24px;">
+              <span style="font-size: 48px; margin-bottom: 16px;">📅</span>
+              <strong style="font-size: 18px; margin-bottom: 8px;">Calendly Scheduling Widget</strong>
+              <p style="color: #666; font-size: 14px; max-width: 400px; line-height: 1.5;">This area will display an embedded calendar allowing prospective LPs to select a 15-minute introductory slot directly with Leib Bolel or Ryan Edwards.</p>
+            </div>
+          </div>
+
+          <!-- Tab 2: Contact Form -->
+          <div id="send-message" class="wf-form-content">
+            <form style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">First & Last Name</label>
+                  <input type="text" placeholder="John Doe" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Institutional Email</label>
+                  <input type="email" placeholder="john@firm.com" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Firm / Organization</label>
+                  <input type="text" placeholder="Acme Capital" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Investor Category</label>
+                  <select style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; background: #fff; border-radius: 4px;">
+                    <option>Select type...</option>
+                    <option>Family Office</option>
+                    <option>Fund of Funds</option>
+                    <option>Endowment / Foundation</option>
+                    <option>High Net Worth Individual</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px;">Message / Inquiry Details</label>
+                <textarea rows="4" placeholder="How can we help you?" style="width: 100%; padding: 12px; border: 1px solid #ccc; font-family: inherit; resize: vertical; border-radius: 4px;"></textarea>
+              </div>
+              <button type="button" style="padding: 16px; background: #111; color: #fff; border: none; font-weight: 600; font-size: 15px; border-radius: 4px; cursor: pointer; transition: background 0.2s;">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+
+        <div style="margin-top: 32px; text-align: center;">
+          <p style="font-size: 14px; color: #777;">
+            📧 Prefer direct email? Reach our relations desk at <a href="mailto:investors@lioncrest.vc" style="color: #111; font-weight: 600; text-decoration: underline;">investors@lioncrest.vc</a>
+          </p>
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #eee;">
+            <p style="font-size: 13px; color: #666; font-style: italic;">
+              Are you a founder raising capital? This route is reserved for LPs. Please visit our <a href="contact-founders.html" style="color: #111; font-weight: 600; text-decoration: underline;">Founder Application Hub →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Team</a>
+                <a href="our-approach.html">Our Approach</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="equity-fund.html">Equity Fund</a>
+                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect</h3>
+              <nav>
+                <a href="contact-lp.html">For LPs</a>
+                <a href="contact-founders.html">For Founders</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    function switchFormTab(tabId) {
+      document.querySelectorAll('.wf-form-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelectorAll('.wf-form-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      const activeTab = Array.from(document.querySelectorAll('.wf-form-tab')).find(tab => tab.innerText.includes(tabId === 'book-meeting' ? 'Meeting' : 'Message'));
+      if (activeTab) activeTab.classList.add('active');
+      
+      const activeContent = document.getElementById(tabId);
+      if (activeContent) activeContent.classList.add('active');
+    }
+  </script>
+</body>
+</html>
