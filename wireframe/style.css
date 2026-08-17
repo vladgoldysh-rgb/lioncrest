@@ -1113,10 +1113,10 @@ textarea.wf-input {
 
 /* Insights & Article templates */
 .wf-progress-bar {
-  position: sticky;
+  position: fixed;
   top: 40px; /* right below version tabs */
-  left: 0;
-  width: 100%;
+  left: 350px; /* offset by sidebar width */
+  right: 0;
   height: 4px;
   background: #eee;
   z-index: 1000;
