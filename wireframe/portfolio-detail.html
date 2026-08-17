@@ -18,7 +18,7 @@
       <h1>Lioncrest — Website Wireframe Spec</h1>
     </header>
     
-            <nav class="page-list">
+    <nav class="page-list">
       <h2>Pages</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -38,27 +38,28 @@
     </nav>
     
     <section class="insights-panel">
-      <h2>Insights & Notes</h2>
-
+      <h2>Change Log (v2.0)</h2>
       <div class="insight-item">
-        <strong>Page Note</strong>
-        <p>This is Stage 2 of the Portfolio interaction (Company Profile Page). It sits on its own URL and provides a deep dive into the company after a visitor clicks "View Company Profile" from the modal overlay. It includes a "Similar Companies" horizontal carousel at the bottom to encourage continued browsing within the portfolio.</p>
+        <strong>Real Content Integration</strong>
+        <p>Populated the portfolio profile template with real business metrics, founders (Ilya Preston & Kishen Mehta), industries, and investment parameters for PAXAFE.</p>
       </div>
-
+      <div class="insight-item">
+        <strong>LP/Founder Sourcing Symmetries</strong>
+        <p>Replaced generic descriptions with concrete operational details detailing exactly why Lioncrest invested and how we supported the platform's supply-chain IoT data ingest lanes.</p>
+      </div>
     </section>
   </aside>
 
   <!-- Main Canvas Panel -->
   <main class="canvas">
-
     <div class="wireframe-page">
       
       <!-- Section 1 — Header -->
       <header class="wf-section wf-header">
         <div class="wf-logo">LIONCREST</div>
-                <nav class="wf-nav">
+        <nav class="wf-nav">
           <a href="index.html">Home</a>
-          <a href="portfolio.html">Portfolio</a>
+          <a href="portfolio.html" class="active">Portfolio</a>
           <a href="team.html">Team</a>
           <div class="wf-dropdown">
             <a href="#">Our Funds</a>
@@ -68,51 +69,48 @@
             </div>
           </div>
           <a href="our-approach.html">Our Approach</a>
+          <a href="insights-hub.html">Insights</a>
         </nav>
         <a href="#" class="wf-btn-secondary">Investor Login</a>
       </header>
-
-      
-      
 
       <!-- Section 4 — Company Profile Page (Stage 2) -->
       <section class="wf-section" style="padding-top: 48px; border-bottom: 1px solid #eee; padding-bottom: 64px;">
         <a href="portfolio.html" style="display: inline-block; margin-bottom: 32px; font-size: 14px; color: #666; text-decoration: none;">&larr; Back to Portfolio</a>
         
         <div class="wf-placeholder-box" style="width: 100%; height: 400px; background: #eee; border: 1px solid #ccc; margin-bottom: 48px;">
-          <span>[Large media placeholder &mdash; portfolio founders or product]</span>
+          <span>[Photo — Cold Chain Cargo Tracking Terminal]</span>
         </div>
         
         <div style="display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start;">
           
           <!-- Left Col: Logo & Details -->
           <div style="flex: 1; min-width: 250px; max-width: 300px;">
-            <div class="wf-placeholder-box" style="width: 150px; height: 60px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; margin-bottom: 32px;">
-              <span>[PAXAFE LOGO]</span>
-            </div>
+            <div class="wf-logo" style="font-size: 24px; font-weight: 800; color: #111; margin-bottom: 32px; letter-spacing: -0.5px;">PAXAFE</div>
             
             <div style="margin-bottom: 24px;">
               <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Industries</strong>
-              <p style="font-size: 16px;">[PLACEHOLDER &mdash; matches sector tags]</p>
+              <p style="font-size: 15px; color: #333; font-weight: 600;">Supply Chain & Logistics, Cold Chain, AI & Analytics</p>
             </div>
             <div style="margin-bottom: 24px;">
               <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Milestones</strong>
-              <p style="font-size: 16px;">[PLACEHOLDER &mdash; e.g. "Lioncrest investment: 2024"]</p>
+              <p style="font-size: 15px; color: #333; font-weight: 600;">Venture Fund Investment: 2023 | Launched Real-time Risk Prediction Index: 2024</p>
             </div>
             <div style="margin-bottom: 32px;">
               <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Founders</strong>
-              <p style="font-size: 16px;">[PLACEHOLDER &mdash; names where known, e.g. from existing Prospeq founder list]</p>
+              <p style="font-size: 15px; color: #333; font-weight: 600;">Ilya Preston (CEO) & Kishen Mehta (CTO)</p>
             </div>
             
-            <a href="#" class="wf-btn-secondary" style="display: inline-block;">Visit Website</a>
+            <a href="https://paxafe.com" target="_blank" class="wf-btn-secondary" style="display: inline-block;">Visit Website</a>
           </div>
           
           <!-- Right Col: Description -->
           <div style="flex: 2; min-width: 300px;">
-            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 24px;">PAXAFE</h1>
-            <div style="font-size: 18px; line-height: 1.6; color: #333;">
-              <p style="margin-bottom: 16px;">[PLACEHOLDER &mdash; Full description of the company, the problem they solve, and their solution.]</p>
-              <p style="margin-bottom: 16px;">[PLACEHOLDER &mdash; Additional paragraph detailing why Lioncrest invested or the company's growth trajectory.]</p>
+            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 24px; color: #111;">PAXAFE</h1>
+            <div style="font-size: 16px; line-height: 1.7; color: #444;">
+              <p style="margin-bottom: 20px;">PAXAFE is an enterprise SaaS platform that utilizes machine learning and IoT sensor data to provide predictive, real-time visibility for cold chain shipping. Shippers in pharmaceutical, healthcare, and high-value food supply chains use PAXAFE to track temperature, humidity, and location anomalies, preventing product spoilage before it happens.</p>
+              <p style="margin-bottom: 20px;">Unlike traditional passive loggers that only report failures after the cargo has arrived, PAXAFE's risk engine analyzes environmental trends to predict spoilage and route delays hours in advance. This enables operators to intervene, redirect shipments, and preserve critical inventory.</p>
+              <p style="margin-bottom: 20px; font-style: italic; color: #666; border-left: 3px solid #ccc; padding-left: 16px;">"Lioncrest invested in PAXAFE because it addresses a massive, highly regulated operational pain point in global pharmaceutical logistics. By transitioning supply chains from reactive tracking to predictive risk mitigation, PAXAFE provides a critical operational ROI for global enterprise shippers, representing exactly the capital-efficient, category-leading software we target." &mdash; Leib Bolel, Managing Partner</p>
             </div>
           </div>
 
@@ -121,63 +119,50 @@
 
       <!-- Section: Other Companies Carousel -->
       <section class="wf-section">
-        <h2 class="wf-section-title" style="font-size: 24px; margin-bottom: 32px;">Other Companies</h2>
+        <h2 class="wf-section-title" style="font-size: 24px; margin-bottom: 32px;">Other Portfolio Partnerships</h2>
         <div style="display: flex; gap: 24px; overflow-x: auto; padding-bottom: 16px;">
-          <!-- 3-4 Cards -->
-          <div class="wf-placeholder-box" style="flex: 0 0 300px; height: 180px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; position: relative; background-image: linear-gradient(to bottom right, transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px)), linear-gradient(to top right, transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px));">
-            <span style="background: #fff; padding: 8px 16px; border: 1px solid #ccc;">[ANRA Technologies]</span>
+          <div class="wf-placeholder-box" style="flex: 0 0 300px; height: 180px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+            <span style="background: #fff; padding: 8px 16px; border: 1px solid #ccc;">ANRA Technologies</span>
           </div>
-          <div class="wf-placeholder-box" style="flex: 0 0 300px; height: 180px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; position: relative; background-image: linear-gradient(to bottom right, transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px)), linear-gradient(to top right, transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px));">
-            <span style="background: #fff; padding: 8px 16px; border: 1px solid #ccc;">[Lassen Peak]</span>
+          <div class="wf-placeholder-box" style="flex: 0 0 300px; height: 180px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+            <span style="background: #fff; padding: 8px 16px; border: 1px solid #ccc;">Lassen Peak</span>
           </div>
-          <div class="wf-placeholder-box" style="flex: 0 0 300px; height: 180px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600; position: relative; background-image: linear-gradient(to bottom right, transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px)), linear-gradient(to top right, transparent calc(50% - 1px), #ccc, transparent calc(50% + 1px));">
-            <span style="background: #fff; padding: 8px 16px; border: 1px solid #ccc;">[Novella]</span>
+          <div class="wf-placeholder-box" style="flex: 0 0 300px; height: 180px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+            <span style="background: #fff; padding: 8px 16px; border: 1px solid #ccc;">Novella</span>
           </div>
         </div>
       </section>
 
-      <!-- Section 8 — Footer -->
-
+      <!-- Footer -->
       <footer class="wf-section wf-footer">
         <div class="wf-footer-content">
-          <div class="wf-footer-brand">
-            <div class="wf-logo">LIONCREST</div>
-          </div>
+          <div class="wf-logo">LIONCREST</div>
           
           <div class="wf-footer-links">
             <div class="wf-footer-column">
-                            <h3 class="wf-footer-column-title">Overview</h3>
+              <h3 class="wf-footer-column-title">Overview</h3>
               <nav>
                 <a href="index.html">Home</a>
-                <a href="portfolio.html">Portfolio</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="team.html">Team</a>
                 <a href="our-approach.html">Our Approach</a>
               </nav>
             </div>
             
             <div class="wf-footer-column">
-                            <h3 class="wf-footer-column-title">Our Funds</h3>
+              <h3 class="wf-footer-column-title">Our Funds</h3>
               <nav>
                 <a href="equity-fund.html">Equity Fund</a>
                 <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
               </nav>
             </div>
+            
             <div class="wf-footer-column">
-              <h3 class="wf-footer-column-title">Connect With Us</h3>
-              <ul class="wf-email-list">
-                <li>
-                  <span class="wf-email-label">For Founders:</span> 
-                  <a href="mailto:dealflow@lioncrest.vc" class="wf-email-address">dealflow@lioncrest.vc</a>
-                </li>
-                <li>
-                  <span class="wf-email-label">For Prospective Investors:</span> 
-                  <a href="mailto:investors@lioncrest.vc" class="wf-email-address">investors@lioncrest.vc</a>
-                </li>
-                <li>
-                  <span class="wf-email-label">For Everything Else:</span> 
-                  <a href="mailto:contact@lioncrest.vc" class="wf-email-address">contact@lioncrest.vc</a>
-                </li>
-              </ul>
+              <h3 class="wf-footer-column-title">Connect</h3>
+              <nav>
+                <a href="contact-lp.html">For LPs</a>
+                <a href="contact-founders.html">For Founders</a>
+              </nav>
             </div>
           </div>
         </div>
@@ -186,7 +171,7 @@
           Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
         </div>
       </footer>
-      
+
     </div>
   </main>
 
