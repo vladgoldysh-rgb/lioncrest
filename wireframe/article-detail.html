@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Managing Dual-Strategy Venture Platforms — Lioncrest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Version Toggles -->
+    <div class="wf-version-tabs">
+    <a href="#" class="wf-version-tab active">V3 (Current)</a>
+    <a href="v2/index.html" class="wf-version-tab">V2</a>
+    <a href="old/index.html" class="wf-version-tab">V1 (Old)</a>
+  </div>
+
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+        <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        
+        <li><a href="equity-fund.html">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="team-detail.html">Team Member Detail</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio-detail.html">Portfolio Profile Page</a></li>
+        
+        
+        
+        
+        <li><a href="private-event.html">Private Event RSVP</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Change Log (v2.0)</h2>
+      <div class="insight-item">
+        <strong>[NEW TEMPLATE] Article Detail (v2.3)</strong>
+        <p>Implemented a highly optimized layout for article pages based on research patterns of top research-oriented venture sites.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Reading Progress & TOC Sticky Sidebar</strong>
+        <p>Added a sticky Table of Contents that tracks scroll position, and a visual progress indicator bar at the top to enhance UX and encourage longer scroll times.</p>
+      </div>
+      <div class="insight-item">
+        <strong>TL;DR Summary Block</strong>
+        <p>Placed an executive summary box at the start of the article for busy LPs/founders to absorb key points in 10 seconds.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Inline Newsletter Block</strong>
+        <p>Embedded a subscription teaser within the copy (Kit.com placeholder) to capture organic reader interest during active reading.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Double CTA Footer</strong>
+        <p>Ended the article with the dual strategy CTA grid. A reader completing the article has a high engagement signal, making this the ideal moment to request pitch decks or schedule discovery calls.</p>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Reading Progress Bar -->
+  <div class="wf-progress-bar">
+    <div id="progressFill" class="wf-progress-fill"></div>
+  </div>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+        <nav class="wf-nav">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="team.html">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds &#9662;</a>
+            <div class="wf-dropdown-menu">
+              <a href="equity-fund.html">Equity Fund</a>
+              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+            </div>
+          </div>
+          
+          
+        </nav>
+        <div class="wf-login-dropdown"><a href="#" class="wf-btn-secondary">Investor Login &#9662;</a><div class="wf-login-dropdown-menu"><a href="#">&#x1F5C2;&nbsp; Venture Fund Portal</a><hr class="wf-login-divider"><a href="#">&#x1F4CA;&nbsp; Prospeq Credit Portal</a></div></div>
+      </header>
+
+      <!-- Article Header (Border-bottom removed to clear line above summary) -->
+      <section class="wf-section" style="padding-bottom: 24px; border-bottom: none;">
+        <span style="font-size: 11px; font-weight: 700; color: #827717; background: #f9fbe7; padding: 4px 8px; border-radius: 3px; text-transform: uppercase;">Fund Strategy</span>
+        <h1 style="font-size: 36px; font-weight: 800; margin-top: 16px; margin-bottom: 16px; line-height: 1.25;">Managing Dual-Strategy Venture Platforms: Equity and Credit Alignment</h1>
+        
+        <div style="display: flex; align-items: center; gap: 16px; color: #666; font-size: 14px; margin-top: 16px;">
+          <div style="width: 36px; height: 36px; background: #ccc; border-radius: 50%;"></div>
+          <div>
+            <strong>Leib Bolel</strong> • Managing Partner, Lioncrest
+            <div style="font-size: 12px; margin-top: 2px;">Oct 12, 2026 • 6 min read • <span id="readingTimeRemaining">6 mins left</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Two-Column Article Layout -->
+      <section class="wf-section" style="padding-top: 0; padding-bottom: 48px;">
+        <div class="wf-article-layout">
+          
+          <!-- Left: Main Body -->
+          <div class="wf-article-body" style="font-size: 16px; line-height: 1.7; color: #333;">
+            
+            <!-- TL;DR Executive Card (Skip link removed) -->
+            <div class="wf-tldr-card">
+              <div class="wf-tldr-title">Executive Summary (TL;DR)</div>
+              <ul class="wf-tldr-list">
+                <li>Emerging technology markets require flexible capital solutions—traditional venture equity alone can cause unnecessary founder dilution.</li>
+                <li>Integrating structured credit (Prospeq) and growth equity under a unified platform provides founders with optimized capital efficiency.</li>
+                <li>For Limited Partners, a dual-strategy platform offers risk-mitigated yields alongside breakout venture upside.</li>
+              </ul>
+            </div>
+
+            <p style="margin-bottom: 24px;">Technology platforms and enterprise software startups face increasingly complex capital decisions. While early-stage venture equity remains the standard tool to fund high-growth strategies, mature cash-flow positive companies require structured finance that doesn't dilute founder ownership. At Lioncrest, we built a dual-strategy platform combining equity and credit to fund companies dynamically at either speed.</p>
+            
+            <h2 id="sec-bottleneck" style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 16px; color: #111;">1. The Evolution of the VC Capital Stack</h2>
+            <p style="margin-bottom: 24px;">Historically, venture capital firms acted solely as equity partners, writing checks for seed and Series A rounds in exchange for substantial stock. In highly regulated verticals—like fintech, cybersecurity, and digital health—platforms require early equity runway. However, once product-market fit is established and recurring revenues begin to scale, relying purely on venture equity to fund working capital or physical logistics runs becomes highly dilutive for the founding team.</p>
+            <p style="margin-bottom: 24px;">By introducing structured credit options under the same management platform, we allow companies to balance high-dilution equity with lower-cost recurring-revenue debt financing, matching the funding source to the specific capital requirement.</p>
+
+            <h2 id="sec-system" style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 16px; color: #111;">2. Structuring Credit for Growth Technology</h2>
+            <p style="margin-bottom: 24px;">Underwriting debt for software and technology platforms differs significantly from traditional commercial bank credit. Traditional bank facilities rely on hard assets or physical collateral. In contrast, our credit underwriting models focus on analyzing contract visibility, customer retention cohorts, unit margins, and market vertical metrics.</p>
+            
+            <!-- Inline Newsletter Capturing Box (Lioncrest Specific) -->
+            <div class="wf-newsletter-box">
+              <h3>Get the Lioncrest Dual-Strategy Report</h3>
+              <p>Receive our quarterly investment outlook and operational scaling playbooks directly in your inbox.</p>
+              <div class="wf-newsletter-form">
+                <input type="email" placeholder="Your work email" style="flex: 1; padding: 12px; border: 1px solid #ccc; font-family: inherit; border-radius: 4px;">
+                <button type="button" style="padding: 12px 24px; background: #111; color: #fff; border: none; font-weight: 600; border-radius: 4px; cursor: pointer;">Subscribe</button>
+              </div>
+            </div>
+
+            <p style="margin-bottom: 24px;">This cash-flow-driven methodology allows platforms (such as AptDeco or Compliance.ai) to utilize non-dilutive credit facilities to scale physical logistics, acquire competitors, or extend runway during volatile public market equity cycles.</p>
+
+            <h2 id="sec-transition" style="font-size: 22px; font-weight: 700; margin-top: 32px; margin-bottom: 16px; color: #111;">3. LP Sourcing Flywheel and Risk Management</h2>
+            <p style="margin-bottom: 24px;">For Limited Partners (LPs), investing in an emerging manager that runs a dual-strategy platform addresses a key portfolio allocation need: achieving predictable yield-generating returns from credit assets while preserving high-conviction equity upside. Furthermore, this dual model establishes a proprietary sourcing flywheel: companies backed by the credit fund serve as highly qualified, transparent pipelines for future equity rounds, and vice versa. This reduces underwriting risk across the entire platform.</p>
+
+            <!-- Sharing Strip / Share links -->
+            <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 24px; margin-top: 40px; font-size: 13px; color: #777;">
+              <span>Share this article:</span>
+              <a href="#" style="color: #111; font-weight: 600;">Twitter</a>
+              <a href="#" style="color: #111; font-weight: 600;">LinkedIn</a>
+              <a href="#" style="color: #111; font-weight: 600;">Email</a>
+            </div>
+
+            <!-- Author Bio Box (Lioncrest Specific) -->
+            <div style="display: flex; gap: 20px; border-top: 1px solid #eee; padding-top: 32px; margin-top: 32px; font-size: 14px;">
+              <div style="width: 48px; height: 48px; background: #ccc; border-radius: 50%; flex-shrink: 0;"></div>
+              <div>
+                <strong style="color: #111; font-size: 15px; display: block; margin-bottom: 4px;">About Leib Bolel</strong>
+                <p style="color: #666; line-height: 1.5;">Leib is a Managing Partner at Lioncrest, specializing in early-stage B2B enterprise software, cross-border expansion, and regulatory technology underwriting.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Sidebar -->
+          <div>
+            <div class="wf-toc-sidebar">
+              <div>
+                <h4 style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.5px;">Table of Contents</h4>
+                <nav class="wf-toc-list">
+                  <a href="#tldr-skip-anchor" class="wf-toc-item active">Executive Summary</a>
+                  <a href="#sec-bottleneck" class="wf-toc-item">1. Capital Stack Evolution</a>
+                  <a href="#sec-system" class="wf-toc-item">2. Structuring Credit</a>
+                  <a href="#sec-transition" class="wf-toc-item">3. LP Sourcing Flywheel</a>
+                </nav>
+              </div>
+              
+              <div style="border-top: 1px solid #eee; padding-top: 24px;">
+                <h4 style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">Related Articles</h4>
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                  <a href="#" style="text-decoration: none; color: inherit; display: block;">
+                    <strong style="font-size: 13px; display: block; line-height: 1.4; color: #111;">How LPs Evaluate Emerging Managers</strong>
+                    <span style="font-size: 11px; color: #777;">4 min read</span>
+                  </a>
+                  <a href="#" style="text-decoration: none; color: inherit; display: block;">
+                    <strong style="font-size: 13px; display: block; line-height: 1.4; color: #111;">Non-Dilutive Growth Debt: A Founder's Guide</strong>
+                    <span style="font-size: 11px; color: #777;">5 min read</span>
+                  </a>
+                </div>
+              </div>
+              
+              <a href="insights-hub.html" style="font-size: 13px; font-weight: 600; text-decoration: underline; color: #111;">&larr; Back to Insights Feed</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Universal CTA Block -->
+      <section class="wf-section" style="padding-top: 0;">
+        <div class="wf-universal-cta">
+          <div class="wf-cta-card">
+            <div>
+              <span class="wf-cta-eyebrow">For Limited Partners</span>
+              <h3 class="wf-cta-title">See How We Invest</h3>
+              <p class="wf-cta-desc">Access our track record, explore multi-strategy allocations, and request operational due diligence reports.</p>
+            </div>
+            <div class="wf-cta-footer">
+              <a href="mailto:info@lioncrest.vc" style="font-weight: 700; text-decoration: underline;">Schedule a Meeting &rarr;</a>
+            </div>
+          </div>
+          
+          <div class="wf-cta-card">
+            <div>
+              <span class="wf-cta-eyebrow">For Technology Founders</span>
+              <h3 class="wf-cta-title">Raise with Lioncrest</h3>
+              <p class="wf-cta-desc">Explore our venture or credit options. Apply directly to qualify your business for expansion capital.</p>
+            </div>
+            <div class="wf-cta-footer">
+              <a href="mailto:info@lioncrest.vc" style="font-weight: 700; text-decoration: underline;">Apply for Funding &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-logo">LIONCREST</div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Team</a>
+                
+                <a href="insights-hub.html">News &amp; Insights</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="equity-fund.html">Equity Fund</a>
+                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect</h3>
+              <nav>
+                <a href="mailto:info@lioncrest.vc">For LPs</a>
+                <a href="mailto:info@lioncrest.vc">For Founders</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Reading time progress fill & timer update
+    const fillEl = document.getElementById('progressFill');
+    const timeLeftEl = document.getElementById('readingTimeRemaining');
+    const totalTime = 6; // 6 mins total
+    
+    // Simulate scroll listener inside the wireframe container
+    const canvasEl = document.querySelector('.canvas');
+    canvasEl.addEventListener('scroll', () => {
+      const scrollHeight = canvasEl.scrollHeight - canvasEl.clientHeight;
+      if (scrollHeight <= 0) return;
+      
+      const pct = (canvasEl.scrollTop / scrollHeight) * 100;
+      fillEl.style.width = Math.min(100, Math.max(0, pct)) + '%';
+      
+      // Update reading time remaining
+      const minsRemaining = Math.max(1, Math.round(totalTime * (1 - (pct / 100))));
+      timeLeftEl.innerText = minsRemaining + ' mins left';
+      
+      // Update active TOC link based on header anchors
+      const headers = ['tldr-skip-anchor', 'sec-bottleneck', 'sec-system', 'sec-transition'];
+      let activeId = headers[0];
+      for (const id of headers) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top < 200) {
+          activeId = id;
+        }
+      }
+      
+      document.querySelectorAll('.wf-toc-item').forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === '#' + activeId || (activeId === 'tldr-skip-anchor' && item.innerText.includes('Summary'))) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
