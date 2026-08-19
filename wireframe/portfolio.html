@@ -25,7 +25,7 @@
         <li><a href="index.html">Home</a></li>
         
         <li><a href="equity-fund.html">Equity Fund</a></li>
-        <li><a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Credit Fund - Prospeq</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="team-detail.html">Team Member Detail</a></li>
         <li><a href="portfolio.html" class="active">Portfolio</a></li>
@@ -61,19 +61,19 @@
         <div class="wf-logo">LIONCREST</div>
         <nav class="wf-nav">
           <a href="index.html">Home</a>
-          <a href="portfolio.html" class="active" class="active">Portfolio</a>
+          <a href="portfolio.html" class="active">Portfolio</a>
           <a href="team.html">Team</a>
           <div class="wf-dropdown">
             <a href="#">Our Funds &#9662;</a>
             <div class="wf-dropdown-menu">
               <a href="equity-fund.html">Equity Fund</a>
-              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              <a href="prospeq-credit-fund.html">Credit Fund - Prospeq</a>
             </div>
           </div>
           
           
         </nav>
-        <div class="wf-login-dropdown"><a href="#" class="wf-btn-secondary">Investor Login &#9662;</a><div class="wf-login-dropdown-menu"><a href="#">&#x1F5C2;&nbsp; Venture Fund Portal</a><hr class="wf-login-divider"><a href="#">&#x1F4CA;&nbsp; Prospeq Credit Portal</a></div></div>
+        <div class="wf-login-dropdown"><a href="#" class="wf-btn-secondary">Investor Login &#9662;</a><div class="wf-login-dropdown-menu"><a href="#">&#x1F5C2;&nbsp; Venture Fund Portal</a><hr class="wf-login-divider"><a href="#">&#x1F4CA;&nbsp; Credit - Prospeq Portal</a></div></div>
       </header>
 
       <!-- Section 1 — Filter Bar -->
@@ -103,54 +103,70 @@
         <div class="wf-founder-grid">
           
           <!-- Card 1 -->
-          <div class="wf-founder-card" style="cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <div class="wf-founder-image">
-              <span class="wf-founder-badge">Funded by Venture Fund</span>
+          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+              <span class="wf-founder-badge" style="position: absolute; top: 12px; left: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px;">Venture Fund</span>
               <span>[Photo — Amit Ganjoo]</span>
             </div>
-            <div class="wf-founder-content">
-              <h3 class="wf-founder-name">Amit Ganjoo</h3>
-              <div class="wf-founder-company">ANRA Technologies (UAS Airspace Management)</div>
-              <p class="wf-founder-story">Helping operators globally coordinate airspace safe. Active board seat support from Leib Bolel.</p>
+            <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Amit Ganjoo</h3>
+              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">ANRA Technologies (UAS Airspace Management)</div>
+              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Helping operators globally coordinate airspace safely. Active board seat support from Leib Bolel.</p>
+              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+                <a href="https://www.anratechnologies.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
+                <a href="https://www.linkedin.com/in/amit-ganjoo-93b5a12/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+              </div>
             </div>
           </div>
 
           <!-- Card 2 -->
-          <div class="wf-founder-card" style="cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <div class="wf-founder-image">
-              <span class="wf-founder-badge">Funded by Prospeq Credit Fund</span>
+          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+              <span class="wf-founder-badge" style="position: absolute; top: 12px; left: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px;">Credit Fund</span>
               <span>[Photo — Reham Fagiri]</span>
             </div>
-            <div class="wf-founder-content">
-              <h3 class="wf-founder-name">Reham Fagiri</h3>
-              <div class="wf-founder-company">AptDeco (Logistics Orchestration Platform)</div>
-              <p class="wf-founder-story">Underwrote structured credit lines to scale warehouse routing systems without dilution.</p>
+            <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Reham Fagiri</h3>
+              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">AptDeco (Logistics Orchestration Platform)</div>
+              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Underwrote structured credit lines to scale warehouse routing systems without dilution.</p>
+              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+                <a href="https://www.aptdeco.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
+                <a href="https://www.linkedin.com/in/reham-fagiri-8012b32/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+              </div>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="wf-founder-card" style="cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <div class="wf-founder-image">
-              <span class="wf-founder-badge">Funded by Venture Fund</span>
-              <span>[Photo — Lassen Peak Founder]</span>
+          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+              <span class="wf-founder-badge" style="position: absolute; top: 12px; left: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px;">Venture Fund</span>
+              <span>[Photo — Hatch Graham]</span>
             </div>
-            <div class="wf-founder-content">
-              <h3 class="wf-founder-name">Public Safety Tech</h3>
-              <div class="wf-founder-company">Lassen Peak (Non-contact safety sensors)</div>
-              <p class="wf-founder-story">Underwrote early growth cycles to establish tactical safety compliance standards in local municipalities.</p>
+            <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Hatch Graham</h3>
+              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Lassen Peak (Non-contact safety sensors)</div>
+              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Underwrote early growth cycles to establish tactical safety compliance standards in local municipalities.</p>
+              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+                <a href="https://www.lassenpeak.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
+                <a href="https://www.linkedin.com/in/hatch-graham-41a4a4/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+              </div>
             </div>
           </div>
 
           <!-- Card 4 -->
-          <div class="wf-founder-card" style="cursor: pointer;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-            <div class="wf-founder-image">
-              <span class="wf-founder-badge">Funded by Prospeq Credit Fund</span>
+          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+              <span class="wf-founder-badge" style="position: absolute; top: 12px; left: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px;">Credit Fund</span>
               <span>[Photo — Asif Alam]</span>
             </div>
-            <div class="wf-founder-content">
-              <h3 class="wf-founder-name">Asif Alam</h3>
-              <div class="wf-founder-company">Compliance.ai (Regulatory Search OS)</div>
-              <p class="wf-founder-story">Debt underwriting to build regulatory data pipelines and expand coverage grids.</p>
+            <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Asif Alam</h3>
+              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Compliance.ai (Regulatory Search OS)</div>
+              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Debt underwriting to build regulatory data pipelines and expand coverage grids.</p>
+              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+                <a href="https://www.compliance.ai" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
+                <a href="https://www.linkedin.com/in/asif-alam-13a8461/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+              </div>
             </div>
           </div>
 
@@ -158,34 +174,7 @@
       </section>
 
       
-      <!-- Section 3 — Company Preview Modal (Stage 1) -->
-      <div id="portfolio-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 24px;">
-          <div style="background: #fff; max-width: 800px; margin: 0 auto; padding: 48px; position: relative;">
-            <button onclick="document.getElementById('portfolio-modal').style.display='none'" style="position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: #666;">&times;</button>
-            
-            <div style="display: flex; gap: 48px; flex-wrap: wrap;">
-              <div style="flex: 1; min-width: 250px;">
-                <div class="wf-placeholder-box" style="width: 150px; height: 60px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; margin-bottom: 24px;" onclick="document.getElementById('portfolio-modal').style.display='flex'">
-                  <span>[PAXAFE LOGO]</span>
-                </div>
-                <h3 style="font-size: 24px; margin-bottom: 16px;">PAXAFE</h3>
-                <p style="font-size: 16px; color: #555; line-height: 1.5; margin-bottom: 32px;">AI-driven platform for cold chain shippers providing real-time visibility into supply chain logistics and proactive risk management.</p>
-              </div>
-              
-              <div style="flex: 1; min-width: 250px;">
-                <div style="margin-bottom: 24px;">
-                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Industries</strong>
-                  <p style="font-size: 16px;">Supply Chain, B2B SaaS, Logistics</p>
-                </div>
-                <div style="margin-bottom: 24px;">
-                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Milestones</strong>
-                  <p style="font-size: 16px;">Lioncrest Investment: 2024</p>
-                </div>
-                <div>
-                  <strong style="font-size: 12px; text-transform: uppercase; color: #999; display: block; margin-bottom: 8px;">Founders</strong>
-                  <p style="font-size: 16px;">Ilya Preston, Ashok Seetharam</p>
-                </div>
-              </div>
+      
             </div>
             
             <div style="margin-top: 32px;">
@@ -214,7 +203,7 @@
               <h3 class="wf-footer-column-title">Overview</h3>
               <nav>
                 <a href="index.html">Home</a>
-                <a href="portfolio.html" class="active" class="active">Portfolio</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="team.html">Team</a>
                 
                 
@@ -225,7 +214,7 @@
               <h3 class="wf-footer-column-title">Our Funds</h3>
               <nav>
                 <a href="equity-fund.html">Equity Fund</a>
-                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+                <a href="prospeq-credit-fund.html">Credit Fund - Prospeq</a>
               </nav>
             </div>
             
