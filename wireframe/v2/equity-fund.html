@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Equity Fund — Lioncrest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Version Toggles -->
+  <div class="wf-version-tabs">
+    <a href="#" class="wf-version-tab active">New Version</a>
+    <a href="old/equity-fund.html" class="wf-version-tab">Old Version</a>
+  </div>
+
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+            <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-approach.html">Our Approach</a></li>
+        <li><a href="equity-fund.html" class="active">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="team-detail.html">Team Member Detail</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio-detail.html">Portfolio Profile Page</a></li>
+        <li><a href="insights-hub.html">Insights Hub</a></li>
+        <li><a href="article-detail.html">Article Detail Template</a></li>
+        <li><a href="contact-lp.html">Contact LPs</a></li>
+        <li><a href="contact-founders.html">Contact Founders</a></li>
+        <li><a href="private-event.html">Private Event RSVP</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Change Log (v2.0)</h2>
+      <div class="insight-item">
+        <strong>Centralized Universal CTA</strong>
+        <p>Replaced the custom input form at the bottom of the page with our universal double-fund CTA block. This guides users clearly and routes tech founders to the new centralized application hub with pre-selected query routing (`contact-founders.html?fund=equity`).</p>
+      </div>
+      <div class="insight-item">
+        <strong>Interactive Team Hover Bios</strong>
+        <p>Integrated hover-state bio overlays on all GP and advisor cards (Leib, Nitsan, Zeba). This lets founders quickly verify specialist qualifications without leaving the page context.</p>
+      </div>
+      <div class="insight-item">
+        <strong>B2B Platform Value-Add Block</strong>
+        <p>Created a dedicated 'How We Value-Add' section highlighting specific non-capital capabilities (Recruiting, GTM outreach scaling, and US/Israel corridors) to address the core founder question: "What do you give besides money?"</p>
+      </div>
+      <div class="insight-item">
+        <strong>Founder Portrait Cards</strong>
+        <p>Upgraded the portfolio display from dry brand logo grids to custom founder portrait cards to reinforce our platform-wide conviction: "Funding Founders, Not Logos."</p>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+        <nav class="wf-nav">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="team.html">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds &#9662;</a>
+            <div class="wf-dropdown-menu">
+              <a href="equity-fund.html" class="active" class="active">Equity Fund</a>
+              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+            </div>
+          </div>
+          <a href="our-approach.html">Our Approach</a>
+          <a href="insights-hub.html">Insights</a>
+        </nav>
+        <div class="wf-login-dropdown"><a href="#" class="wf-btn-secondary">Investor Login &#9662;</a><div class="wf-login-dropdown-menu"><a href="#">&#x1F5C2;&nbsp; Venture Fund Portal</a><hr class="wf-login-divider"><a href="#">&#x1F4CA;&nbsp; Prospeq Credit Portal</a></div></div>
+      </header>
+
+      <!-- Section 1 — Hero -->
+      <section class="wf-section wf-hero-new" style="border-bottom: 1px solid #eee; padding-bottom: 48px;">
+        <div class="wf-hero-header">
+
+          <h2 class="wf-section-title" style="font-size: 44px; margin-top: 12px; margin-bottom: 16px; color: #111;">Lioncrest Venture Fund</h2>
+          <p class="wf-hero-subhead" style="margin-bottom: 48px; max-width: 700px; color: #666; font-size: 16px;">Investing in Capital Efficient Companies with Product Market Fit</p>
+        </div>
+        
+        <div class="wf-stats-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;">
+          <div class="wf-stat-item">
+            <h4 style="font-size: 11px; text-transform: uppercase; color: #666; margin-bottom: 8px; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 8px; letter-spacing: 0.5px;">Initial Ticket</h4>
+            <p style="font-size: 13px; line-height: 1.5; color: #444;">$500K – $3MM, with reserves for follow-on allocations. Active board partnership model.</p>
+          </div>
+          <div class="wf-stat-item">
+            <h4 style="font-size: 11px; text-transform: uppercase; color: #666; margin-bottom: 8px; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 8px; letter-spacing: 0.5px;">Target Stage</h4>
+            <p style="font-size: 13px; line-height: 1.5; color: #444;">Seed+ and Series A platforms, typically with revenues >$1.5MM ARR.</p>
+          </div>
+          <div class="wf-stat-item">
+            <h4 style="font-size: 11px; text-transform: uppercase; color: #666; margin-bottom: 8px; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 8px; letter-spacing: 0.5px;">Geography</h4>
+            <p style="font-size: 13px; line-height: 1.5; color: #444;">North America and Israel. Support structures for scaling global teams in the US market.</p>
+          </div>
+          <div class="wf-stat-item">
+            <h4 style="font-size: 11px; text-transform: uppercase; color: #666; margin-bottom: 8px; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 8px; letter-spacing: 0.5px;">Investment Fit</h4>
+            <p style="font-size: 13px; line-height: 1.5; color: #444;">Excluding hardware, CPG, and FDA-regulated medical devices. We only invest where we add value.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 — Sectors We Focus On -->
+      <section class="wf-section" style="padding-bottom: 48px;">
+
+        <p style="font-size: 16px; margin-bottom: 24px; line-height: 1.6; max-width: 800px; color: #444;">While Lioncrest invests across a broad spectrum of B2B technologies, we see exceptional opportunity in AI-driven, vertically focused companies addressing mission-critical pain points in highly regulated industries.</p>
+        <div class="wf-tag-cloud" style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 11px; text-transform: uppercase; font-weight: 700; border-radius: 3px; background: #fafafa;">FINTECH</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 11px; text-transform: uppercase; font-weight: 700; border-radius: 3px; background: #fafafa;">CYBERSECURITY</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 11px; text-transform: uppercase; font-weight: 700; border-radius: 3px; background: #fafafa;">DIGITAL HEALTH</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 11px; text-transform: uppercase; font-weight: 700; border-radius: 3px; background: #fafafa;">SUPPLY CHAIN/LOGISTICS</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 11px; text-transform: uppercase; font-weight: 700; border-radius: 3px; background: #fafafa;">DEFENSE/GOV TECH</span>
+          <span class="wf-tag" style="padding: 8px 16px; border: 1px solid #ccc; font-size: 11px; text-transform: uppercase; font-weight: 700; border-radius: 3px; background: #fafafa;">LEGALTECH</span>
+        </div>
+      </section>
+
+      <!-- Section 3 — The Team Behind This Fund (Hover Bios) -->
+      <section class="wf-section" style="padding-top: 48px;">
+
+        <h2 class="wf-section-title" style="font-size: 24px; margin-bottom: 24px;">The Team Behind This Fund</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          
+          <div class="wf-team-card-v2">
+            <div class="wf-team-photo-placeholder"></div>
+            <div>
+              <strong style="font-size: 15px; color: #111; display: block;">Leib Bolel</strong>
+              <span style="font-size: 12px; color: #666;">Managing Partner (Venture)</span>
+            </div>
+            <div class="wf-team-bio-overlay">
+              <strong>Leib Bolel</strong>
+              <p>Specializes in early-stage B2B enterprise software and category design. Leads venture sourcing and handles US-Israel market expansion lanes.</p>
+            </div>
+          </div>
+
+          <div class="wf-team-card-v2">
+            <div class="wf-team-photo-placeholder"></div>
+            <div>
+              <strong style="font-size: 15px; color: #111; display: block;">Nitsan Nairdorf</strong>
+              <span style="font-size: 12px; color: #666;">Venture Partner</span>
+            </div>
+            <div class="wf-team-bio-overlay">
+              <strong>Nitsan Nairdorf</strong>
+              <p>Venture Partner. Focuses on Israel-based seed-stage tech sourcing, technical team diligence, and cross-border expansion playbooks.</p>
+            </div>
+          </div>
+
+          <div class="wf-team-card-v2">
+            <div class="wf-team-photo-placeholder"></div>
+            <div>
+              <strong style="font-size: 15px; color: #111; display: block;">Zeba Rooheen</strong>
+              <span style="font-size: 12px; color: #666;">Financial Data Analyst</span>
+            </div>
+            <div class="wf-team-bio-overlay">
+              <strong>Zeba Rooheen</strong>
+              <p>Financial Analyst. Conducts portfolio performance modeling, market sizing benchmarks, and financial modeling during underwriting stages.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 4 — How We Value Add (NEW) -->
+      <section class="wf-section" style="background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+
+        <h2 class="wf-section-title">How We Value-Add</h2>
+        <p style="font-size: 14px; color: #666; margin-bottom: 32px;">We provide institutional support systems designed to scale B2B software companies beyond initial product-market fit.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <div style="background: #fff; border: 1px solid #ddd; padding: 24px; border-radius: 6px;">
+            <strong style="font-size: 16px; display: block; margin-bottom: 8px; color: #111;">GTM & Outreach Playbooks</strong>
+            <p style="font-size: 13px; color: #666; line-height: 1.5;">We help founders transition from relationship-based sales to repeatable, metrics-driven outbound process engines.</p>
+          </div>
+          <div style="background: #fff; border: 1px solid #ddd; padding: 24px; border-radius: 6px;">
+            <strong style="font-size: 16px; display: block; margin-bottom: 8px; color: #111;">US & Israel Corridors</strong>
+            <p style="font-size: 13px; color: #666; line-height: 1.5;">We assist Israel-based engineering teams in scaling corporate business development and marketing operations in North America.</p>
+          </div>
+          <div style="background: #fff; border: 1px solid #ddd; padding: 24px; border-radius: 6px;">
+            <strong style="font-size: 16px; display: block; margin-bottom: 8px; color: #111;">Recruiting & Networks</strong>
+            <p style="font-size: 13px; color: #666; line-height: 1.5;">We plug early-stage companies directly into seasoned B2B operator networks to build professional executive boards.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 — Case Study Switcher -->
+      <section class="wf-section">
+
+        <h2 class="wf-section-title" style="margin-bottom: 24px;">Active Partnerships in Action</h2>
+        
+        <div class="wf-case-tabs">
+          <div class="wf-case-tab active" onclick="switchCaseTab('case-anra')">ANRA Technologies</div>
+          <div class="wf-case-tab" onclick="switchCaseTab('case-lassen')">Lassen Peak</div>
+        </div>
+
+        <div id="case-anra" class="wf-case-content active">
+          <div class="wf-case-grid">
+            <div class="wf-case-visual">[Photo — UAS Traffic Hub]</div>
+            <div>
+              <div class="wf-case-header">ANRA Technologies — UAS Airspace Orchestration</div>
+              <div class="wf-case-points">
+                <div class="wf-case-point">
+                  <div class="wf-case-point-icon">⚠️</div>
+                  <div>
+                    <div class="wf-case-point-title">The Challenge</div>
+                    <div class="wf-case-point-text">Regulators and airspace operators lacked reliable, end-to-end cloud platforms to safely coordinate commercial drone flight corridors.</div>
+                  </div>
+                </div>
+                <div class="wf-case-point">
+                  <div class="wf-case-point-icon">🚀</div>
+                  <div>
+                    <div class="wf-case-point-title">Our Role</div>
+                    <div class="wf-case-point-text">Underwrote Seed+ and Series A capital, taking an active board seat to scale GTM operations in North America and coordinate regulatory partnerships.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="wf-case-quote">
+                "Lioncrest didn't just review our tech. Leib and the team sat in our board meetings and systematically introduced us to key defense-tech buyers in the US market."
+              </div>
+              <div class="wf-case-result">
+                🏆 Global Market Leader in UAS Traffic Management Systems
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="case-lassen" class="wf-case-content">
+          <div class="wf-case-grid">
+            <div class="wf-case-visual">[Photo — Safe Search Radar]</div>
+            <div>
+              <div class="wf-case-header">Lassen Peak — Safe Public Safety Sensor Systems</div>
+              <div class="wf-case-points">
+                <div class="wf-case-point">
+                  <div class="wf-case-point-icon">⚠️</div>
+                  <div>
+                    <div class="wf-case-point-title">The Challenge</div>
+                    <div class="wf-case-point-text">Law enforcement officers required non-contact, highly reliable sensing tech to scan for concealed weapons in tactical environments.</div>
+                  </div>
+                </div>
+                <div class="wf-case-point">
+                  <div class="wf-case-point-icon">🚀</div>
+                  <div>
+                    <div class="wf-case-point-title">Our Role</div>
+                    <div class="wf-case-point-text">Funded expansion engineering cycles and helped map institutional municipal sales corridors.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="wf-case-quote">
+                "The guidance Lioncrest provided during our product validation phase saved us months of development time and focused our municipal sales team."
+              </div>
+              <div class="wf-case-result">
+                🏆 Pioneering Safe Contactless Sensor Diligence in Public Safety
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 — Portfolio Section (Funding Founders Not Logos Carousel) -->
+      <section class="wf-section wf-portfolio" style="padding-top: 48px;">
+
+        <div class="wf-section-header-inline">
+          <h2 class="wf-section-title">Venture Portfolio</h2>
+          <a href="portfolio.html" class="wf-link-outlined">See the Full Portfolio &rarr;</a>
+        </div>
+        
+        <div class="wf-carousel-container">
+          <div class="wf-carousel-slides">
+            
+            <!-- Slide 1 -->
+            <div class="wf-slide active">
+              <div class="wf-placeholder-box wf-media-large" style="position: relative;">
+                <span class="wf-founder-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">Funded by Venture Fund</span>
+                <span>[Photo — Amit Ganjoo]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>Amit Ganjoo</strong>
+                  <p style="font-size: 12px; color: #666; margin-top: 4px; margin-bottom: 8px;">ANRA Technologies (UAS Airspace Software)</p>
+                  <p>Helping operators globally coordinate airspace safely. Active board seat support from Leib Bolel.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="wf-slide">
+              <div class="wf-placeholder-box wf-media-large" style="position: relative;">
+                <span class="wf-founder-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">Funded by Venture Fund</span>
+                <span>[Photo — Novella Founders]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>Insurance Tech Founders</strong>
+                  <p style="font-size: 12px; color: #666; margin-top: 4px; margin-bottom: 8px;">Novella (Specialty Insurance Distribution OS)</p>
+                  <p>Backing the AI-native engine connecting brokers, carriers, and underwriters through a single workflow platform.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="wf-slide">
+              <div class="wf-placeholder-box wf-media-large" style="position: relative;">
+                <span class="wf-founder-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">Funded by Venture Fund</span>
+                <span>[Photo — Public Safety Tech]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>Lassen Peak</strong>
+                  <p style="font-size: 12px; color: #666; margin-top: 4px; margin-bottom: 8px;">Lassen Peak (Non-contact safety sensors)</p>
+                  <p>Underwrote early growth cycles to establish tactical safety compliance standards in local municipalities.</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="wf-carousel-dots">
+            <span class="wf-dot active"></span>
+            <span class="wf-dot"></span>
+            <span class="wf-dot"></span>
+          </div>
+        </div>
+      </section>
+      <!-- Section 7 — Universal CTA Block (Centralized Forms Replacement) -->
+      <section class="wf-section" style="padding-top: 48px;">
+        <div class="wf-universal-cta">
+          <div class="wf-cta-card">
+            <div>
+              <span class="wf-cta-eyebrow">For Limited Partners</span>
+              <h3 class="wf-cta-title">See How We Invest</h3>
+              <p class="wf-cta-desc">Access our track record, explore equity-venture performance, and request due diligence materials.</p>
+            </div>
+            <div class="wf-cta-footer">
+              <a href="contact-lp.html" style="font-weight: 700; text-decoration: underline;">Schedule a Meeting &rarr;</a>
+            </div>
+          </div>
+          
+          <div class="wf-cta-card">
+            <div>
+              <span class="wf-cta-eyebrow">For Technology Founders</span>
+              <h3 class="wf-cta-title">Raise with Lioncrest</h3>
+              <p class="wf-cta-desc">Explore our early-stage venture backing. Apply directly to qualify your business for equity capital.</p>
+            </div>
+            <div class="wf-cta-footer">
+              <a href="contact-founders.html?fund=equity" style="font-weight: 700; text-decoration: underline;">Apply for Funding &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section — Recent Strategy Analysis -->
+      <section class="wf-section" style="padding-top: 48px; padding-bottom: 48px; border-bottom: 1px solid #eee;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <h3 style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 700; letter-spacing: 0.5px;">Recent Strategy Analysis</h3>
+          <a href="insights-hub.html" style="font-size: 13px; font-weight: 600; text-decoration: underline; color: #111;">View All Insights &rarr;</a>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <a href="article-detail.html" style="text-decoration: none; color: inherit; border: 1px solid #eee; padding: 20px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.2s;">
+            <div>
+              <span style="font-size: 10px; font-weight: 700; color: #827717; text-transform: uppercase; display: block; margin-bottom: 8px;">Fund Strategy</span>
+              <h4 style="font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: #111;">Managing Dual-Strategy Venture Platforms: Equity and Credit Alignment</h4>
+            </div>
+            <span style="font-size: 11px; color: #777;">6 min read • Oct 12</span>
+          </a>
+          <a href="insights-hub.html" style="text-decoration: none; color: inherit; border: 1px solid #eee; padding: 20px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.2s;">
+            <div>
+              <span style="font-size: 10px; font-weight: 700; color: #2e7d32; text-transform: uppercase; display: block; margin-bottom: 8px;">Venture Capital</span>
+              <h4 style="font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: #111;">How LPs Evaluate Emerging Managers in Regulated Verticals</h4>
+            </div>
+            <span style="font-size: 11px; color: #777;">4 min read • Oct 2</span>
+          </a>
+          <a href="insights-hub.html" style="text-decoration: none; color: inherit; border: 1px solid #eee; padding: 20px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.2s;">
+            <div>
+              <span style="font-size: 10px; font-weight: 700; color: #c62828; text-transform: uppercase; display: block; margin-bottom: 8px;">Private Credit</span>
+              <h4 style="font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: #111;">Non-Dilutive Growth Debt: A Founder's Guide to Structured Credit</h4>
+            </div>
+            <span style="font-size: 11px; color: #777;">5 min read • Sep 28</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 8 — FAQ -->
+      <section class="wf-section">
+        <h2 class="wf-section-title">Venture Fund FAQ</h2>
+        <div class="wf-faq-list">
+          <details class="wf-accordion">
+            <summary>What stage do you invest at?</summary>
+            <div class="wf-accordion-content">Seed+ through Series A, typically with more than $1.5MM in ARR and a clear path to capital efficiency.</div>
+          </details>
+          <details class="wf-accordion">
+            <summary>Do you take board seats?</summary>
+            <div class="wf-accordion-content">Yes — we take board seats on most of our investments and stay actively involved. We are hands-on operator partners, not passive check-writers.</div>
+          </details>
+          <details class="wf-accordion">
+            <summary>What if my company is outside your listed sectors?</summary>
+            <div class="wf-accordion-content">We are primarily focused on cybersecurity, fintech, digital health, supply chain/logistics, defense/gov tech, and legaltech — but if there is a strong case for fit and we can add value, we will review the deal.</div>
+          </details>
+          <details class="wf-accordion">
+            <summary>How does the credit fund differ from the equity fund?</summary>
+            <div class="wf-accordion-content">Venture equity is about backing breakout upside. Prospeq Credit is structured financing for cash-flow positive companies with proven revenue, built around risk-adjusted, yield-generating debt structures.</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Team</a>
+                <a href="our-approach.html">Our Approach</a>
+                <a href="insights-hub.html">News &amp; Insights</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="equity-fund.html" class="active" class="active">Equity Fund</a>
+                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect</h3>
+              <nav>
+                <a href="contact-lp.html">For LPs</a>
+                <a href="contact-founders.html">For Founders</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    function switchCaseTab(tabId) {
+      document.querySelectorAll('.wf-case-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.querySelectorAll('.wf-case-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      const activeTab = Array.from(document.querySelectorAll('.wf-case-tab')).find(tab => tab.innerText.includes(tabId === 'case-anra' ? 'ANRA' : 'Lassen'));
+      if (activeTab) activeTab.classList.add('active');
+      
+      const activeContent = document.getElementById(tabId);
+      if (activeContent) activeContent.classList.add('active');
+    }
+  </script>
+</body>
+</html>

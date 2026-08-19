@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lioncrest — Website Wireframe Spec</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Version Toggles -->
+  <div class="wf-version-tabs">
+    <a href="#" class="wf-version-tab active">New Version</a>
+    <a href="old/index.html" class="wf-version-tab">Old Version</a>
+  </div>
+
+  <!-- Sidebar Panel -->
+  <aside class="sidebar">
+    <header class="sidebar-header">
+      <h1>Lioncrest — Website Wireframe Spec</h1>
+    </header>
+    
+            <nav class="page-list">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="our-approach.html">Our Approach</a></li>
+        <li><a href="equity-fund.html">Equity Fund</a></li>
+        <li><a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="team-detail.html">Team Member Detail</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio-detail.html">Portfolio Profile Page</a></li>
+        <li><a href="insights-hub.html">Insights Hub</a></li>
+        <li><a href="article-detail.html">Article Detail Template</a></li>
+        <li><a href="contact-lp.html">Contact LPs</a></li>
+        <li><a href="contact-founders.html">Contact Founders</a></li>
+        <li><a href="private-event.html">Private Event RSVP</a></li>
+      </ul>
+    </nav>
+    
+    <section class="insights-panel">
+      <h2>Change Log (v2.0)</h2>
+      <div class="insight-item">
+        <strong>Hero Action Integration</strong>
+        <p>Introduced a single focused step for LPs ("See How We Invest") to eliminate CTA emptiness. Shifted the founder/partner photos to the same line as the copy to visually integrate them.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Proof of Life Insights</strong>
+        <p>Featured recent thought leadership articles directly below the Hero (inspired by Aleph.vc). This validates the fund's activity level immediately to prospective LPs.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Scalable Platform Nomenclature</strong>
+        <p>Removed the restrictive 'Two Funds' branding to support future product expansions. Replaced it with positioning emphasizing 'Capital Built Around Where You Are' and 'Different Capital for Different Moments'.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Centralized LP/Founder CTA</strong>
+        <p>Replaced the fragmented forms at the bottom of the page with the universal CTA block. This routes traffic into LP or Founder queues cleanly.</p>
+      </div>
+      <div class="insight-item">
+        <strong>Co-investor Signal Grid</strong>
+        <p>Added a 'Co-investor Signal' block featuring logos of co-investment partners (Viola, Aleph, Greylock, Lux Capital) to establish trust for emerging managers.</p>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Main Canvas Panel -->
+  <main class="canvas">
+    <div class="wireframe-page">
+      
+      <!-- Section 1 — Header -->
+      <header class="wf-section wf-header">
+        <div class="wf-logo">LIONCREST</div>
+        <nav class="wf-nav">
+          <a href="index.html" class="active" class="active">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="team.html">Team</a>
+          <div class="wf-dropdown">
+            <a href="#">Our Funds &#9662;</a>
+            <div class="wf-dropdown-menu">
+              <a href="equity-fund.html">Equity Fund</a>
+              <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+            </div>
+          </div>
+          <a href="our-approach.html">Our Approach</a>
+          <a href="insights-hub.html">Insights</a>
+        </nav>
+        <div class="wf-login-dropdown"><a href="#" class="wf-btn-secondary">Investor Login &#9662;</a><div class="wf-login-dropdown-menu"><a href="#">&#x1F5C2;&nbsp; Venture Fund Portal</a><hr class="wf-login-divider"><a href="#">&#x1F4CA;&nbsp; Prospeq Credit Portal</a></div></div>
+      </header>
+
+      <!-- Section 2 — Hero -->
+      <section class="wf-section" style="padding-bottom: 48px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div style="min-width: 0;">
+
+            <h1 style="font-size: 44px; font-weight: 800; line-height: 1.15; margin-top: 12px; margin-bottom: 20px; color: #111;">
+              Backing What's Next — With the Capital to Match
+            </h1>
+            <p style="font-size: 16px; color: #666; line-height: 1.6; margin-bottom: 32px;">
+              Equity for the upside. Credit for the discipline. Different capital for different growth moments—built to move at your speed.
+            </p>
+            <div style="display: flex; gap: 16px;">
+              <a href="our-approach.html" class="wf-btn" style="background: #111; color: #fff; padding: 14px 28px; border-radius: 4px; font-weight: 600;">See How We Invest</a>
+            </div>
+          </div>
+          
+          <div class="wf-hero-image-container" style="position: relative; height: auto; min-width: 0;">
+            <div class="wf-placeholder-box wf-hero-shared-photo" style="aspect-ratio: 4/3; height: auto; width: 100%; background: #eee; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #999; padding: 60px 0;">
+              <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 12px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <span>[Photo — Leib Bolel & Ryan Edwards]</span>
+            </div>
+            
+            <div class="wf-quote-overlay" style="margin-top: 16px; padding: 16px; background: #fdfdfd; border-left: 3px solid #111;">
+              <blockquote style="font-style: italic; color: #555; font-size: 13px; margin-bottom: 8px;">
+                "Different growth stages require different underwriting models. We unified equity and credit under one platform so founders don't have to dilute to survive, and LPs capture optimized yield."
+              </blockquote>
+              <cite style="display: block; font-size: 11px; font-weight: 700; color: #111; text-transform: uppercase;">
+                Leib & Ryan, Managing Partners
+              </cite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Section 3 — Proof of Life Insights Teaser (Aleph Style) -->
+      <section class="wf-section" style="padding-top: 48px; padding-bottom: 48px; border-bottom: 1px solid #eee;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <h3 style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 700; letter-spacing: 0.5px;">Latest Firm Insights</h3>
+          <a href="insights-hub.html" style="font-size: 13px; font-weight: 600; text-decoration: underline; color: #111;">View All Insights &rarr;</a>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          
+          <a href="article-detail.html" style="text-decoration: none; color: inherit; border: 1px solid #eee; padding: 20px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.2s;">
+            <div>
+              <span style="font-size: 10px; font-weight: 700; color: #827717; text-transform: uppercase; display: block; margin-bottom: 8px;">Fund Strategy</span>
+              <h4 style="font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: #111;">Managing Dual-Strategy Venture Platforms: Equity and Credit Alignment</h4>
+            </div>
+            <span style="font-size: 11px; color: #777;">6 min read • Oct 12</span>
+          </a>
+
+          <a href="insights-hub.html" style="text-decoration: none; color: inherit; border: 1px solid #eee; padding: 20px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.2s;">
+            <div>
+              <span style="font-size: 10px; font-weight: 700; color: #2e7d32; text-transform: uppercase; display: block; margin-bottom: 8px;">Venture Capital</span>
+              <h4 style="font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: #111;">How LPs Evaluate Emerging Managers in Regulated Verticals</h4>
+            </div>
+            <span style="font-size: 11px; color: #777;">4 min read • Oct 2</span>
+          </a>
+
+          <a href="insights-hub.html" style="text-decoration: none; color: inherit; border: 1px solid #eee; padding: 20px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.2s;">
+            <div>
+              <span style="font-size: 10px; font-weight: 700; color: #c62828; text-transform: uppercase; display: block; margin-bottom: 8px;">Private Credit</span>
+              <h4 style="font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: #111;">Non-Dilutive Growth Debt: A Founder's Guide to Structured Credit</h4>
+            </div>
+            <span style="font-size: 11px; color: #777;">5 min read • Sep 28</span>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Section 4 — Scalable Platform Selection (Two Funds Upgrade) -->
+      <section class="wf-section">
+
+        <h2 class="wf-section-title">Capital Built Around Where You Are</h2>
+        <p style="font-size: 16px; color: #666; line-height: 1.6; max-width: 600px; margin-bottom: 32px;">
+          We unified venture equity and structured credit under a single platform to fund growth at every stage, from seed extension to cash-flow scaling.
+        </p>
+        
+        <div class="wf-card-grid-2">
+          <!-- Card 1: Equity -->
+          <div class="wf-card">
+            <div class="wf-card-label">VENTURE CAPITAL</div>
+            <h3 class="wf-card-title">Lioncrest Venture Fund</h3>
+            <p class="wf-card-desc">Backing B2B software categories before they are fully defined. Active seed and Series A equity partnership.</p>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: #e8e8e8; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="wf-card-ledby" style="margin-bottom: 0;">Led by Leib Bolel</div>
+            </div>
+            <a href="equity-fund.html" class="wf-btn">Explore the Equity Fund &rarr;</a>
+          </div>
+          
+          <!-- Card 2: Credit -->
+          <div class="wf-card">
+            <div class="wf-card-label">PRIVATE CREDIT</div>
+            <h3 class="wf-card-title">Lioncrest Prospeq Fund</h3>
+            <p class="wf-card-desc">Structured financing for cash-flow positive enterprise platforms. Risk-adjusted yields independent of equity markets.</p>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: #e8e8e8; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="wf-card-ledby" style="margin-bottom: 0;">Led by Ryan Edwards</div>
+            </div>
+            <a href="prospeq-credit-fund.html" class="wf-btn">Explore Prospeq &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 — Track Record Metrics -->
+      <section class="wf-section" style="background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding-top: 48px; padding-bottom: 48px;">
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          <div>
+
+            <h2 style="font-size: 28px; font-weight: 700; margin-top: 8px; margin-bottom: 12px; color: #111; letter-spacing: -0.5px;">Platform Performance</h2>
+            <p style="color: #666; font-size: 14px; line-height: 1.5; max-width: 600px;">Key statistics detailing capital deployment and underwriting scale across both our equity and credit structures.</p>
+          </div>
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+            <div style="border-left: 2px solid #111; padding-left: 16px; padding-top: 4px; padding-bottom: 4px;">
+              <div style="font-size: 36px; font-weight: 700; color: #111; line-height: 1;">$220M+</div>
+              <div style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 700; margin-top: 8px; letter-spacing: 0.5px;">Capital Deployed</div>
+            </div>
+            <div style="border-left: 2px solid #111; padding-left: 16px; padding-top: 4px; padding-bottom: 4px;">
+              <div style="font-size: 36px; font-weight: 700; color: #111; line-height: 1;">45+</div>
+              <div style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 700; margin-top: 8px; letter-spacing: 0.5px;">Active Portfolio</div>
+            </div>
+            <div style="border-left: 2px solid #111; padding-left: 16px; padding-top: 4px; padding-bottom: 4px;">
+              <div style="font-size: 36px; font-weight: 700; color: #111; line-height: 1;">15+ Yrs</div>
+              <div style="font-size: 11px; text-transform: uppercase; color: #777; font-weight: 700; margin-top: 8px; letter-spacing: 0.5px;">Track Record</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 — Portfolio Section (Funding Founders Not Logos Carousel) -->
+      <section class="wf-section wf-portfolio">
+
+        <div class="wf-section-header-inline">
+          <h2 class="wf-section-title">Funding Founders, Not Logos</h2>
+          <a href="portfolio.html" class="wf-link-outlined">See the Full Portfolio &rarr;</a>
+        </div>
+        
+        <div class="wf-carousel-container">
+          <div class="wf-carousel-slides">
+            
+            <!-- Slide 1 -->
+            <div class="wf-slide active">
+              <div class="wf-placeholder-box wf-media-large" style="position: relative;">
+                <span class="wf-founder-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">Funded by Venture Fund</span>
+                <span>[Photo — Amit Ganjoo]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>Amit Ganjoo</strong>
+                  <p style="font-size: 12px; color: #666; margin-top: 4px; margin-bottom: 8px;">ANRA Technologies (UAS Airspace Software)</p>
+                  <p>We backed ANRA to help scale end-to-end software systems globally, establishing safe, regulated skies for international drone operations.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="wf-slide">
+              <div class="wf-placeholder-box wf-media-large" style="position: relative;">
+                <span class="wf-founder-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">Funded by Prospeq Credit Fund</span>
+                <span>[Photo — Reham Fagiri]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>Reham Fagiri</strong>
+                  <p style="font-size: 12px; color: #666; margin-top: 4px; margin-bottom: 8px;">AptDeco (Logistics Orchestration Platform)</p>
+                  <p>Prospeq provided growth debt financing to optimize local routing infrastructure, allowing scaling operations without equity dilution.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="wf-slide">
+              <div class="wf-placeholder-box wf-media-large" style="position: relative;">
+                <span class="wf-founder-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">Funded by Venture Fund</span>
+                <span>[Photo — Public Safety Tech]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>Lassen Peak</strong>
+                  <p style="font-size: 12px; color: #666; margin-top: 4px; margin-bottom: 8px;">Lassen Peak (Non-contact safety sensors)</p>
+                  <p>Underwrote early growth cycles to establish tactical safety compliance standards in local municipalities.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="wf-slide">
+              <div class="wf-placeholder-box wf-media-large" style="position: relative;">
+                <span class="wf-founder-badge" style="position: absolute; top: 20px; left: 20px; z-index: 10;">Funded by Prospeq Credit Fund</span>
+                <span>[Photo — Asif Alam]</span>
+                <div class="wf-portfolio-subtext">
+                  <strong>Asif Alam</strong>
+                  <p style="font-size: 12px; color: #666; margin-top: 4px; margin-bottom: 8px;">Compliance.ai (Regulatory Search OS)</p>
+                  <p>Debt underwriting to build regulatory data pipelines and expand coverage grids.</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="wf-carousel-dots">
+            <span class="wf-dot active"></span>
+            <span class="wf-dot"></span>
+            <span class="wf-dot"></span>
+            <span class="wf-dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7 — Team Teaser with Hover Bios -->
+      <section class="wf-section">
+
+        <div class="wf-section-header-inline" style="margin-bottom: 32px;">
+          <h2 class="wf-section-title">The People Behind the Capital</h2>
+          <a href="team.html" class="wf-link-outlined">Meet the Team &rarr;</a>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+          
+          <!-- Team Member 1 -->
+          <div class="wf-team-card-v2">
+            <div class="wf-team-photo-placeholder"></div>
+            <div>
+              <strong style="font-size: 15px; color: #111; display: block;">Leib Bolel</strong>
+              <span style="font-size: 12px; color: #666;">Managing Partner (Venture)</span>
+            </div>
+            <div class="wf-team-bio-overlay">
+              <strong>Leib Bolel</strong>
+              <p>Specializes in early-stage B2B enterprise software and category design. Leads venture sourcing and handles US-Israel market expansion lanes.</p>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="wf-team-card-v2">
+            <div class="wf-team-photo-placeholder"></div>
+            <div>
+              <strong style="font-size: 15px; color: #111; display: block;">Ryan Edwards</strong>
+              <span style="font-size: 12px; color: #666;">Managing Partner (Credit)</span>
+            </div>
+            <div class="wf-team-bio-overlay">
+              <strong>Ryan Edwards</strong>
+              <p>Directs Prospeq credit underwriting and structured debt allocations. Over 15 years experience structuring asset-backed growth models.</p>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="wf-team-card-v2">
+            <div class="wf-team-photo-placeholder"></div>
+            <div>
+              <strong style="font-size: 15px; color: #111; display: block;">Zeba Rooheen</strong>
+              <span style="font-size: 12px; color: #666;">Financial Data Analyst</span>
+            </div>
+            <div class="wf-team-bio-overlay">
+              <strong>Zeba Rooheen</strong>
+              <p>Financial Analyst. Conducts portfolio performance modeling, market sizing benchmarks, and financial modeling during underwriting stages.</p>
+            </div>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="wf-team-card-v2">
+            <div class="wf-team-photo-placeholder"></div>
+            <div>
+              <strong style="font-size: 15px; color: #111; display: block;">Nitsan Nairdorf</strong>
+              <span style="font-size: 12px; color: #666;">Venture Partner</span>
+            </div>
+            <div class="wf-team-bio-overlay">
+              <strong>Nitsan Nairdorf</strong>
+              <p>Venture Partner. Focuses on Israel-based seed-stage tech sourcing, technical team diligence, and cross-border expansion playbooks.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 8 — Universal CTA Block (Unified footer form replacement) -->
+      <section class="wf-section" style="padding-top: 0;">
+        <div class="wf-universal-cta">
+          <div class="wf-cta-card">
+            <div>
+              <span class="wf-cta-eyebrow">For Limited Partners</span>
+              <h3 class="wf-cta-title">See How We Invest</h3>
+              <p class="wf-cta-desc">Access our track record, explore multi-strategy allocations, and request operational due diligence reports.</p>
+            </div>
+            <div class="wf-cta-footer">
+              <a href="contact-lp.html" style="font-weight: 700; text-decoration: underline;">Schedule a Meeting &rarr;</a>
+            </div>
+          </div>
+          
+          <div class="wf-cta-card">
+            <div>
+              <span class="wf-cta-eyebrow">For Technology Founders</span>
+              <h3 class="wf-cta-title">Raise with Lioncrest</h3>
+              <p class="wf-cta-desc">Explore our venture or credit options. Apply directly to qualify your business for expansion capital.</p>
+            </div>
+            <div class="wf-cta-footer">
+              <a href="contact-founders.html" style="font-weight: 700; text-decoration: underline;">Apply for Funding &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="wf-section wf-footer">
+        <div class="wf-footer-content">
+          <div class="wf-footer-brand">
+            <div class="wf-logo">LIONCREST</div>
+          </div>
+          
+          <div class="wf-footer-links">
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Overview</h3>
+              <nav>
+                <a href="index.html" class="active" class="active">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Team</a>
+                <a href="our-approach.html">Our Approach</a>
+                <a href="insights-hub.html">News &amp; Insights</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Our Funds</h3>
+              <nav>
+                <a href="equity-fund.html">Equity Fund</a>
+                <a href="prospeq-credit-fund.html">Prospeq &mdash; Credit Fund</a>
+              </nav>
+            </div>
+            
+            <div class="wf-footer-column">
+              <h3 class="wf-footer-column-title">Connect</h3>
+              <nav>
+                <a href="contact-lp.html">For LPs</a>
+                <a href="contact-founders.html">For Founders</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wf-footer-copyright">
+          Copyright &copy; 2026 Lioncrest — A Dual Strategy Platform — All Rights Reserved.
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
