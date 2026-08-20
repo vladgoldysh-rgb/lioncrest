@@ -19,26 +19,21 @@
       <h1>Lioncrest — Website Wireframe Spec</h1>
     </header>
     
-            <nav class="page-list">
+    <nav class="page-list">
       <h2>Pages</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
-        
         <li><a href="equity-fund.html">Equity Fund</a></li>
         <li><a href="prospeq-credit-fund.html">Credit Fund - Prospeq</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="team-detail.html">Team Member Detail</a></li>
         <li><a href="portfolio.html" class="active">Portfolio</a></li>
         <li><a href="portfolio-detail.html">Portfolio Profile Page</a></li>
-        
-        
-        
-        
         <li><a href="private-event.html">Private Event RSVP</a></li>
       </ul>
     </nav>
     
-        <section class="insights-panel">
+    <section class="insights-panel">
       <h2>Change Log (19.08+)</h2>
       <div class="insight-item" style="padding: 0; background: transparent; border: none;">
         <ul style="margin-top: 0; padding-left: 16px; color: #444; font-size: 13px; line-height: 1.6;">
@@ -70,515 +65,576 @@
               <a href="prospeq-credit-fund.html">Credit Fund - Prospeq</a>
             </div>
           </div>
-          
-          
         </nav>
         <div class="wf-login-dropdown"><a href="#" class="wf-btn-secondary">Investor Login &#9662;</a><div class="wf-login-dropdown-menu"><a href="#">&#x1F5C2;&nbsp; Venture Fund Portal</a><hr class="wf-login-divider"><a href="#">&#x1F4CA;&nbsp; Credit - Prospeq Portal</a></div></div>
       </header>
 
-      <!-- Section 1 — Filter Bar -->
-      <section class="wf-section wf-hero-new" style="border-bottom: 1px solid #eee; padding-bottom: 24px;">
-        <h2 class="wf-section-title" style="font-size: 44px; margin-bottom: 32px; color: #111;">Portfolio</h2>
-        <div class="wf-filter-bar" style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center;">
-          <div style="display: flex; gap: 24px; flex: 1;">
-            <a href="#" style="text-decoration: none; color: #111; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #111; margin-bottom: -2px;">All Funds</a>
-            <a href="#" style="text-decoration: none; color: #666; font-weight: 600; padding-bottom: 8px;">Equity Fund</a>
-            <a href="#" style="text-decoration: none; color: #666; font-weight: 600; padding-bottom: 8px;">Credit Fund</a>
+      <!-- Section 1 — Controls & Filters -->
+      <section class="wf-section" style="padding-bottom: 48px;">
+        <h2 class="wf-section-title" style="margin-bottom: 24px;">Our Portfolio</h2>
+        
+        <div class="wf-portfolio-controls" style="display: flex; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+          <!-- Search input -->
+          <div style="flex-grow: 1; min-width: 250px; max-width: 350px;">
+            <input type="text" id="company-search" oninput="handleFilters()" placeholder="Search companies or founders..." style="width: 100%; padding: 12px 16px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; outline: none; font-weight: 500; box-sizing: border-box;">
           </div>
-          <div style="display: flex; gap: 16px;">
-            <select class="wf-select wf-input" style="padding: 8px 32px 8px 12px; width: 150px;">
-              <option>All Sectors</option>
-              <option>Fintech</option>
-              <option>Cybersecurity</option>
-              <option>Logistics</option>
-              <option>SaaS</option>
-            </select>
-            <input type="text" class="wf-input" placeholder="Search portfolio..." style="padding: 8px 12px; border: 1px solid #ccc; font-family: inherit; width: 200px;">
+
+          <!-- Select dropdown filters -->
+          <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; line-height: 1;">
+            <!-- Fund Filter -->
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <label for="fund-filter" style="font-size: 14px; font-weight: 600; color: #555; vertical-align: middle;">Fund:</label>
+              <select id="fund-filter" onchange="handleFilters()" style="padding: 0 16px; height: 40px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; font-weight: 600; color: #111; background: #fff; cursor: pointer; outline: none; box-sizing: border-box; vertical-align: middle;">
+                <option value="all">All Funds</option>
+                <option value="venture">Venture Fund</option>
+                <option value="credit">Credit Fund</option>
+              </select>
+            </div>
+
+            <!-- Industry Filter -->
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <label for="industry-filter" style="font-size: 14px; font-weight: 600; color: #555; vertical-align: middle;">Industry:</label>
+              <select id="industry-filter" onchange="handleFilters()" style="padding: 0 16px; height: 40px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; font-weight: 600; color: #111; background: #fff; cursor: pointer; outline: none; box-sizing: border-box; vertical-align: middle;">
+                <option value="all">All Industries</option>
+                <option value="Aviation">Aviation</option>
+                <option value="Defense">Defense</option>
+                <option value="Supply Chain">Supply Chain</option>
+                <option value="InsurTech">InsurTech</option>
+                <option value="FinTech">FinTech</option>
+                <option value="Marketplace">Marketplace</option>
+                <option value="B2C">B2C</option>
+                <option value="Tech-Enabled">Tech-Enabled</option>
+                <option value="SaaS">SaaS</option>
+                <option value="Digital Health">Digital Health</option>
+                <option value="Hardware">Hardware</option>
+              </select>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Section 2 — Company Grid (Upgraded to custom founder portrait cards) -->
-      <section class="wf-section">
-        <div class="wf-founder-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <!-- Section 2 — Company Grid (2 Columns) -->
+      <section class="wf-section" style="padding-top: 0;">
+        <div class="wf-founder-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
           <!-- Card: ANRA Technologies -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="venture" data-sector="Aviation" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Aviation</span>
               <span>[Photo — Amit]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Amit Ganjoo</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Amit Ganjoo <a href="https://www.linkedin.com/in/amit-ganjoo-93b5a12/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">ANRA Technologies</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Provides global end-to-end software solutions for UAS traffic management and drone operations, supporting regulators, airspace managers, and commercial operators.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.anratechnologies.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/amit-ganjoo-93b5a12/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Venture Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Lassen Peak -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="venture" data-sector="Defense" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Defense</span>
               <span>[Photo — Hatch]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Hatch Graham</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Hatch Graham <a href="https://www.linkedin.com/in/hatch-graham-41a4a4/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Lassen Peak</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Pioneers advanced, non-invasive public safety sensor technology that helps law enforcement safely detect concealed dangerous objects and weapons.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.lassenpeak.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/hatch-graham-41a4a4/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Venture Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: PAXAFE -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="venture" data-sector="Supply Chain" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Supply Chain</span>
               <span>[Photo — Ilya]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Ilya Preston & Ashok Seetharam</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Ilya Preston <a href="https://www.linkedin.com/in/ilyapreston/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a> &amp; Ashok Seetharam <a href="https://www.linkedin.com/in/ashokseetharam/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">PAXAFE</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">AI-driven, device-agnostic platform that turns cold chain shipment data into actionable risk insights, helping shippers reduce loss and improve efficiency.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.paxafe.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/ilyapreston/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Venture Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Novella -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="venture" data-sector="InsurTech" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">InsurTech</span>
               <span>[Photo — Max]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Max Kane</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Max Kane <a href="https://www.linkedin.com/in/max-kane-524673/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Novella</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Building the AI-native operating system for specialty insurance distribution, connecting brokers, carriers, and underwriters through a unified workflow platform.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.novellainsurance.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/max-kane-524673/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Venture Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Upwardli -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="FinTech" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">FinTech</span>
               <span>[Photo — Aaron]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Aaron Gregory & Danielle Hill</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Aaron Gregory <a href="https://www.linkedin.com/in/amgregory/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a> &amp; Danielle Hill <a href="#" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Upwardli</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Credit access and credit building tools designed to help underserved demographics build their financial future.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.upwardli.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/amgregory/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Metafy -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Marketplace" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Marketplace</span>
               <span>[Photo — Josh]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Josh Fabian</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Josh Fabian <a href="https://www.linkedin.com/in/joshfabian/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Metafy</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Platform connecting players with world-class gaming coaches and mentors for personalized gameplay improvement.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://metafy.gg" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/joshfabian/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Players' Lounge -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="B2C" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">B2C</span>
               <span>[Photo — Austin]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Austin Woolridge</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Austin Woolridge <a href="https://www.linkedin.com/in/austin-woolridge-64b81730/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Players' Lounge</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Social gaming platform where gamers of all skill levels play and compete in their favorite video games for prizes.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.playerslounge.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/austin-woolridge-64b81730/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Bacon Work -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Marketplace" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Marketplace</span>
               <span>[Photo — Hunter]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Hunter Sebresos</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Hunter Sebresos <a href="https://www.linkedin.com/in/concepthunter/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Bacon Work</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">On-demand local labor app that connects businesses with hourly workers quickly and efficiently.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.baconwork.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/concepthunter/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Buzze -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Tech-Enabled" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Tech-Enabled</span>
               <span>[Photo — Aaron]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Aaron Lieberman</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Aaron Lieberman <a href="https://www.linkedin.com/in/aaron4az/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Buzze</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">EV charging software and network solutions that enable shared charging infrastructures for local neighborhoods.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://buzze.biz/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/aaron4az/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Eulerity -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="SaaS" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">SaaS</span>
               <span>[Photo — Tanuj]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Tanuj Joshi</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Tanuj Joshi <a href="https://www.linkedin.com/in/tanjoshi/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Eulerity</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Automated multi-channel digital marketing platform helping franchise brands and local businesses scale campaigns.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://eulerity.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/tanjoshi/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Pilotly -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="SaaS" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">SaaS</span>
               <span>[Photo — James]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">James Norman</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                James Norman <a href="https://www.linkedin.com/in/motown/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Pilotly</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Audience insights platform built for creative teams to test video content, pilot shows, and receive feedback at scale.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.pilot.ly/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/motown/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Financial Gravity -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="FinTech" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">FinTech</span>
               <span>[Photo — Scott]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Scott Winters</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Scott Winters <a href="https://www.linkedin.com/in/scott-winters/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Financial Gravity</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Tax-centric wealth management platform offering tax planning, advisor networks, and investment advisory services.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://financialgravity.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/scott-winters/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Compliance.ai -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="SaaS" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">SaaS</span>
               <span>[Photo — Asif]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Asif Alam</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Asif Alam <a href="https://www.linkedin.com/in/asifalam/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Compliance.ai</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Regulatory search engine and compliance tracking platform designed to ingest global government files natively.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.compliance.ai/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/asifalam/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: AptDeco -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Marketplace" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Marketplace</span>
               <span>[Photo — Reham]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Reham Fagiri & Kalam Dennis</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Reham Fagiri <a href="https://www.linkedin.com/in/reham-fagiri-97683b1/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a> &amp; Kalam Dennis <a href="#" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">AptDeco</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Furniture marketplace providing local pick-up, inspection, and delivery services for hassle-free second-hand sales.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.aptdeco.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/reham-fagiri-97683b1/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: SKU Distribution -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Tech-Enabled" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Tech-Enabled</span>
               <span>[Photo — James]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">James Peacock</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                James Peacock <a href="https://www.linkedin.com/in/james-peacock-5558678/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">SKU Distribution</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">B2B inventory fulfillment and warehousing management system scaling retail distribution lanes.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://skudistribution.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/james-peacock-5558678/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Appvance AI -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="SaaS" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">SaaS</span>
               <span>[Photo — Andre]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Andre Liao</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Andre Liao <a href="https://www.linkedin.com/in/andreliao/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Appvance AI</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Generative AI-driven software test automation platform providing high-performance QA coverage pipelines.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://appvance.ai/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/andreliao/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: MayaMD -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Digital Health" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Digital Health</span>
               <span>[Photo — Vipindas]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Vipindas Chengat</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Vipindas Chengat <a href="https://www.linkedin.com/in/vipindas-chengat-9429019/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">MayaMD</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">AI clinical intelligence assistant providing conversational health checks and diagnostic pathways.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.mayamd.ai/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/vipindas-chengat-9429019/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Queen One -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Marketplace" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Marketplace</span>
               <span>[Photo — Maricor]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Maricor Resente & Ryan Urban</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Maricor Resente <a href="https://www.linkedin.com/in/maricorresente/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a> &amp; Ryan Urban <a href="#" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Queen One</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">E-commerce platform scaling operations and custom fulfillment structures globally.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.queen.one/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/maricorresente/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: The Muse -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Marketplace" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Marketplace</span>
               <span>[Photo — Heather]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Heather Tenuto</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Heather Tenuto <a href="https://www.linkedin.com/in/heathertenuto/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">The Muse</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Career growth platform and job search database connecting millions of candidates with workplace cultures.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.themuse.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/heathertenuto/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Supersocial -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="B2C" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">B2C</span>
               <span>[Photo — Yon]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Yon Raz-Fridman</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Yon Raz-Fridman <a href="https://www.linkedin.com/in/yonatanrf/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Supersocial</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Metaverse virtual world builder creating high-fidelity immersive games and spaces for global brands.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.supersocialinc.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/yonatanrf/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Edge Markets -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="B2C" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">B2C</span>
               <span>[Photo — Seni]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Seni Thomas</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Seni Thomas <a href="https://www.linkedin.com/in/senithomas/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Edge Markets</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Peer-to-peer betting exchange and yield-generating sports contract market infrastructure.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.edgeboost.bet/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/senithomas/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Sorting Robotics -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Hardware" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Hardware</span>
               <span>[Photo — Nohtal]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Nohtal Partansky</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Nohtal Partansky <a href="https://www.linkedin.com/in/nohtal/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Sorting Robotics</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Industrial automation robotics company developing specialized production line robots for consumer packaged goods.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.sortingrobotics.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/nohtal/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Hairbrella -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="B2C" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">B2C</span>
               <span>[Photo — Tracey]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Tracey Pickett</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Tracey Pickett <a href="https://www.linkedin.com/in/traceypickett/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Hairbrella</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Rainwear and custom rain hats developer creating fashionable protective apparel for active lifestyles.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.hairbrella.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/traceypickett/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Gradient Cyber -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="SaaS" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">SaaS</span>
               <span>[Photo — James]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">James Hamilton</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                James Hamilton <a href="https://www.linkedin.com/in/james-hamilton-5a65969/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Gradient Cyber</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Continuous network monitoring and cybersecurity threat detection platform for mid-market enterprises.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.gradientcyber.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/james-hamilton-5a65969/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Elevate -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="SaaS" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">SaaS</span>
               <span>[Photo — Norman]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Norman Rodriguez</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Norman Rodriguez <a href="https://www.linkedin.com/in/norman-rodriguez/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Elevate</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">B2B recruitment technology platform matching engineering talent with fast-growing technical teams.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://elevatehire.co/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/norman-rodriguez/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: The Patch Brand -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="B2C" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">B2C</span>
               <span>[Photo — Gil]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Gil Brozki</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Gil Brozki <a href="https://www.linkedin.com/in/gilbrozki/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">The Patch Brand</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Vitamin patch brand offering daily patches infused with pure active ingredients for wellness.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://thepatchbrand.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/gilbrozki/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
 
           <!-- Card: Stack Influence -->
-          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+          <div class="wf-founder-card" data-fund="credit" data-sector="Marketplace" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 16/10; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
               <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Marketplace</span>
               <span>[Photo — Laurent]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Laurent Vincent</h3>
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.3;">
+                Laurent Vincent <a href="https://www.linkedin.com/in/laurent-vincent-3aa43b5b/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #0077b5; color: #fff; font-size: 10px; font-weight: 700; border-radius: 2px; text-decoration: none; margin-left: 4px; margin-right: 4px;">in</a>
+              </h3>
               <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Stack Influence</div>
               <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Influencer marketing automation platform that connects brands with micro-influencers for social campaigns.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://stackinfluence.com/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/laurent-vincent-3aa43b5b/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+                <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: #777; letter-spacing: 0.5px; border: 1px solid #eaeaea; padding: 4px 8px; border-radius: 2px; background: #fafafa;">Credit Fund</span>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Show More Paging -->
+        <div style="margin-top: 48px; text-align: center;">
+          <button id="show-more-btn" onclick="loadMore()" style="padding: 12px 32px; background: #111; color: #fff; border: 1px solid #111; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;">Show More</button>
+        </div>
       </section>
-
-      
-      
-            </div>
-            
-            <div style="margin-top: 32px;">
-              <a href="portfolio-detail.html" class="wf-btn" style="display: block; width: 100%; text-align: center; box-sizing: border-box;">View Company Profile</a>
-            </div>
-            
-            <!-- Modal Navigation -->
-            <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 24px; margin-top: 48px;">
-              <a href="#" style="text-decoration: none; color: #666; font-size: 14px;">&larr; Lassen Peak</a>
-              <a href="#" style="text-decoration: none; color: #666; font-size: 14px;">Novella &rarr;</a>
-            </div>
-          </div>
-      </div>
-
-      
 
       <!-- Footer -->
       <footer class="wf-section wf-footer">
@@ -594,8 +650,6 @@
                 <a href="index.html">Home</a>
                 <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="team.html">Team</a>
-                
-                
               </nav>
             </div>
             
