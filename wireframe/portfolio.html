@@ -625,6 +625,68 @@
     </div>
   </main>
 
+  <script>
+    let currentFund = 'all';
+    let currentIndustry = 'all';
+    let searchQuery = '';
+    let visibleCount = 8;
+
+    function handleFilters() {
+      currentFund = document.getElementById('fund-filter').value;
+      currentIndustry = document.getElementById('industry-filter').value;
+      searchQuery = document.getElementById('company-search').value.toLowerCase().trim();
+      visibleCount = 8; // reset pagination on filter change
+      updatePortfolioView();
+    }
+
+    function updatePortfolioView() {
+      const cards = Array.from(document.querySelectorAll('.wf-founder-card'));
+      let matchedCount = 0;
+      let shownCount = 0;
+
+      cards.forEach(card => {
+        const fund = card.getAttribute('data-fund');
+        const sector = card.getAttribute('data-sector');
+        const name = card.querySelector('.wf-founder-name').innerText.toLowerCase();
+        const company = card.querySelector('.wf-founder-company').innerText.toLowerCase();
+        
+        const matchesFund = (currentFund === 'all' || fund === currentFund);
+        const matchesIndustry = (currentIndustry === 'all' || sector === currentIndustry);
+        const matchesSearch = (searchQuery === '' || name.includes(searchQuery) || company.includes(searchQuery));
+
+        if (matchesFund && matchesIndustry && matchesSearch) {
+          matchedCount++;
+          if (shownCount < visibleCount) {
+            card.style.display = 'flex';
+            shownCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const btn = document.getElementById('show-more-btn');
+      if (btn) {
+        if (shownCount < matchedCount) {
+          btn.style.display = 'inline-block';
+        } else {
+          btn.style.display = 'none';
+        }
+      }
+    }
+
+    function loadMore() {
+      visibleCount += 8;
+      updatePortfolioView();
+    }
+
+    // Run on load
+    document.addEventListener('DOMContentLoaded', () => {
+      updatePortfolioView();
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
