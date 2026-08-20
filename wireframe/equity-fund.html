@@ -253,32 +253,24 @@
 <!-- Section 6 — Portfolio Section (Funding Founders Not Logos Grid) -->
       <section class="wf-section wf-portfolio" style="padding-top: 48px;">
 
-        <div class="wf-section-header-inline" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px;">
-          <h2 class="wf-section-title" style="margin-bottom: 0;">Venture Portfolio</h2>
-          <a href="portfolio.html" class="wf-link-outlined" style="text-decoration: none; border: 1px solid #111; padding: 10px 20px; border-radius: 4px; color: #111; font-weight: 600; font-size: 14px; display: inline-block;">See the Full Portfolio &rarr;</a>
-        </div>
-
-        <!-- Filter Bar -->
-        <div class="wf-portfolio-filters" style="display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap;">
-          <button class="wf-filter-btn active" onclick="filterSectors('all')" style="padding: 8px 16px; border: 1px solid #111; background: #111; color: #fff; border-radius: 4px; font-weight: 600; cursor: pointer; transition: all 0.2s;">All</button>
-          <button class="wf-filter-btn" onclick="filterSectors('aviation')" style="padding: 8px 16px; border: 1px solid #ccc; background: #fff; color: #333; border-radius: 4px; font-weight: 600; cursor: pointer; transition: all 0.2s;">Aviation/Airspace</button>
-          <button class="wf-filter-btn" onclick="filterSectors('fintech')" style="padding: 8px 16px; border: 1px solid #ccc; background: #fff; color: #333; border-radius: 4px; font-weight: 600; cursor: pointer; transition: all 0.2s;">FinTech/InsurTech</button>
-          <button class="wf-filter-btn" onclick="filterSectors('defense')" style="padding: 8px 16px; border: 1px solid #ccc; background: #fff; color: #333; border-radius: 4px; font-weight: 600; cursor: pointer; transition: all 0.2s;">Defense/Gov Tech</button>
+        <div style="margin-bottom: 40px; text-align: left;">
+          <span style="display: inline-block; padding: 4px 8px; border: 1px solid #111; font-size: 10px; text-transform: uppercase; font-weight: 700; border-radius: 2px; margin-bottom: 12px; letter-spacing: 0.5px;">Funded by Venture</span>
+          <h2 class="wf-section-title" style="margin: 0; font-size: 40px; font-weight: 700; color: #111;">Funding Founders, Not Logos</h2>
         </div>
         
         <!-- Grid of Cards -->
         <div class="wf-founder-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
           
           <!-- Card 1: ANRA Technologies -->
-          <div class="wf-founder-card" data-sector="aviation" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
             <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
-              <span class="wf-founder-badge" style="position: absolute; top: 12px; left: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px;">Venture Fund</span>
+              <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Aviation / Airspace</span>
               <span>[Photo — Amit Ganjoo]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
               <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Amit Ganjoo</h3>
-              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">ANRA Technologies (UAS Airspace Software)</div>
-              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Helping operators globally coordinate airspace safely. Active board seat support from Leib Bolel.</p>
+              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">ANRA Technologies</div>
+              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Provides global end-to-end software solutions for UAS traffic management and drone operations, supporting regulators, airspace managers, and commercial operators.</p>
               <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.anratechnologies.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
                 <a href="https://www.linkedin.com/in/amit-ganjoo-93b5a12/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
@@ -286,36 +278,53 @@
             </div>
           </div>
 
-          <!-- Card 2: Novella -->
-          <div class="wf-founder-card" data-sector="fintech" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+          <!-- Card 2: Lassen Peak -->
+          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
             <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
-              <span class="wf-founder-badge" style="position: absolute; top: 12px; left: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px;">Venture Fund</span>
-              <span>[Photo — Max Kane]</span>
-            </div>
-            <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
-              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Max Kane</h3>
-              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Novella (Specialty Insurance Distribution OS)</div>
-              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Backing the AI-native engine connecting brokers, carriers, and underwriters through a single workflow platform.</p>
-              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
-                <a href="https://www.novellainsurance.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
-                <a href="https://www.linkedin.com/in/max-kane-524673/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: Lassen Peak -->
-          <div class="wf-founder-card" data-sector="defense" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
-            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
-              <span class="wf-founder-badge" style="position: absolute; top: 12px; left: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px;">Venture Fund</span>
+              <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Defense / Gov Tech</span>
               <span>[Photo — Hatch Graham]</span>
             </div>
             <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
               <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Hatch Graham</h3>
-              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Lassen Peak (Non-contact safety sensors)</div>
-              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Underwrote early growth cycles to establish tactical safety compliance standards in local municipalities.</p>
+              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Lassen Peak</div>
+              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Pioneers advanced, non-invasive public safety sensor technology that helps law enforcement safely detect concealed dangerous objects and weapons.</p>
               <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
                 <a href="https://www.lassenpeak.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
                 <a href="https://www.linkedin.com/in/hatch-graham-41a4a4/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: PAXAFE -->
+          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+              <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Supply Chain</span>
+              <span>[Photo — Ilya Preston]</span>
+            </div>
+            <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Ilya Preston & Ashok Seetharam</h3>
+              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">PAXAFE</div>
+              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">AI-driven, device-agnostic platform that turns cold chain shipment data into actionable risk insights, helping shippers reduce loss and improve efficiency.</p>
+              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+                <a href="https://www.paxafe.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
+                <a href="https://www.linkedin.com/in/ilyapreston/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Novella -->
+          <div class="wf-founder-card" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; background: #fff; display: flex; flex-direction: column;">
+            <div class="wf-founder-image" style="aspect-ratio: 4/3; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; position: relative;">
+              <span class="wf-founder-badge" style="position: absolute; top: 12px; right: 12px; background: #111; color: #fff; padding: 4px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; border-radius: 2px; width: fit-content;">Legaltech / Insurtech</span>
+              <span>[Photo — Max Kane]</span>
+            </div>
+            <div class="wf-founder-content" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1; text-align: left;">
+              <h3 class="wf-founder-name" style="font-size: 20px; font-weight: 700; margin-bottom: 4px; color: #111;">Max Kane</h3>
+              <div class="wf-founder-company" style="font-size: 13px; color: #666; margin-bottom: 16px;">Novella</div>
+              <p class="wf-founder-story" style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 24px; flex-grow: 1;">Building the AI-native operating system for specialty insurance distribution, connecting brokers, carriers, and underwriters through a unified workflow platform.</p>
+              <div style="display: flex; gap: 16px; border-top: 1px solid #eee; padding-top: 16px; margin-top: auto;">
+                <a href="https://www.novellainsurance.com" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Website ↗</a>
+                <a href="https://www.linkedin.com/in/max-kane-524673/" target="_blank" style="font-size: 13px; font-weight: 700; color: #111; text-decoration: none;">Founder LinkedIn ↗</a>
               </div>
             </div>
           </div>
